@@ -4,10 +4,11 @@ import { HomePage } from './components/HomePage';
 import { RequisitosPage } from './components/RequisitosPage';
 import { OfrecemosPage } from './components/OfrecemosPage';
 import { ContactPage } from './components/ContactPage';
+import { Footer } from './components/footer';
 
 function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/ReclutaMet-1-1.0">
             <NavBar />
 
             <Routes>
@@ -17,6 +18,8 @@ function App() {
                 <Route path="/Contacto" element={<ContactPage />} />
                 <Route path="/Otro" element={<ContactPage />} />
             </Routes>
+
+            <Footer />
         </BrowserRouter>
     );
 }
