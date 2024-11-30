@@ -125,16 +125,6 @@
 .homepage {
     position: relative;
     overflow: hidden;
-    height: 100vh;
-}
-
-.homepage h2 {
-    padding: 0 2vw;
-    margin: 0;
-    margin-top: 2vw;
-    font-size: calc(2vw + 7px);
-    color: #305386;
-    text-align: center;
 }
 
 .background-circle {
@@ -154,12 +144,12 @@
     z-index: -1;
 }
 
-.content {
+.content-home-1 {
     position: relative;
     z-index: 1;
 }
 
-.content p {
+.content-home-1 p {
     padding: 2vw 0;
     margin: 0;
     font-size: calc(1vw + 8px);
@@ -167,7 +157,7 @@
     text-align: center;
 }
 
-.content h1 {
+.content-home-1 h1 {
     padding: 0 15vw;
     margin: 0;
     font-size: calc(2vw + 10px);
@@ -184,6 +174,76 @@
 .img-portada-home {
     width: 47vw;
     height: auto;
+}
+
+.content-home-2 h2 {
+    padding: 0 2vw;
+    margin: 0;
+    margin-top: 2vw;
+    font-size: calc(2vw + 7px);
+    color: #305386;
+    text-align: center;
+}
+
+/* ------------------------------------------------------------------------------------ FORM */
+
+.content-form {
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 50px;
+}
+
+.content-form .form-block-1,
+.content-form .form-block-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-form .form-block-1 > div,
+.content-form .form-block-2 > div {
+    flex: 1 1 calc(50% - 1.5rem);
+    margin-top: 5px;
+}
+
+.content-form label {
+    color: #192543;
+    font-size: calc(1vw + 10px);
+}
+
+.content-form input,
+.content-form select,
+.content-form option {
+    color: #ffffff;
+    background-color: #1d3b6f;
+}
+
+.content-form input,
+.content-form select {
+    border-radius: 1.5rem;
+}
+
+.text-danger {
+    font-size: 11px;
+    display: block;
+}
+
+.content-envio {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.boton-form {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    padding: 0.375rem 0.8rem;
+    margin-right: 10px; /* distancia del spinner */
+    border-radius: 1rem;
+    color: #ffffff;
+    background-color: #192543;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
 }
 
 /* ------------------------------------------------------------------------------------ FOOTER */
@@ -242,10 +302,6 @@
 
     /* ------------------------------------------------------------------------------------ HOMEPAGE */
 
-    .homepage h2 {
-        font-size: calc(2vw + 3px);
-    }
-
     .background-circle {
         width: 90vw;
         height: 90vw;
@@ -263,6 +319,29 @@
 
     .img-portada-home {
         width: 40vw;
+    }
+
+    .content-home-2 {
+        padding: 20px;
+    }
+
+    .content-home-2 h2 {
+        font-size: calc(2vw + 3px);
+        margin-top: -5px;
+    }
+
+    /* ------------------------------------------------------------------------------------ FORM */
+
+    .content-form .form-block-1,
+    .content-form .form-block-2 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .form-block-1,
+    .form-block-2 {
+        flex: 1 1 calc(50% - 1rem);
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */
@@ -324,6 +403,15 @@
         width: 36vw;
     }
 
+    .content-home-2 {
+        padding: 40px;
+    }
+
+    .content-home-2 h2 {
+        font-size: calc(2vw + 2px);
+        margin-top: -25px;
+    }
+
     /* ------------------------------------------------------------------------------------ FOOTER */
 
     .texto-footer-1 {
@@ -377,6 +465,15 @@
 
     .img-portada-home {
         width: 32vw;
+    }
+
+    .content-home-2 {
+        padding: 60px;
+    }
+
+    .content-home-2 h2 {
+        font-size: calc(2vw + 2px);
+        margin-top: -40px;
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */
@@ -443,6 +540,15 @@
         width: 29vw;
     }
 
+    .content-home-2 {
+        padding: 100px;
+    }
+
+    .content-home-2 h2 {
+        font-size: calc(2vw + 1px);
+        margin-top: -50px;
+    }
+
     /* ------------------------------------------------------------------------------------ FOOTER */
 
     .footer-content {
@@ -501,6 +607,15 @@
         width: 28vw;
     }
 
+    .content-home-2 {
+        padding: 140px;
+    }
+
+    .content-home-2 h2 {
+        font-size: calc(2vw + 0px);
+        margin-top: -100px;
+    }
+
     /* ------------------------------------------------------------------------------------ FOOTER */
 
     .footer-content {
@@ -551,6 +666,15 @@
 
     .content-img-portada-home {
         padding-right: 16vw;
+    }
+
+    .content-home-2 {
+        padding: 210px;
+    }
+
+    .content-home-2 h2 {
+        font-size: calc(1vw + 15px);
+        margin-top: -180px;
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */

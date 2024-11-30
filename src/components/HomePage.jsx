@@ -1,4 +1,5 @@
 import ImgPortadaHomePage from '../assets/images/Portada Home Page.webp';
+import { FormContact } from './Form';
 
 export const HomePage = () => {
     return (
@@ -6,7 +7,7 @@ export const HomePage = () => {
             <section>
                 <div className="background-circle"></div>
 
-                <div className="content">
+                <div className="content-home-1">
                     <div>
                         <p className="light-text">
                             ¿te gustaría aprender, tener un crecimiento <br /> profesional, laboral y ser bien compensado asi <br /> como trabajar
@@ -29,8 +30,10 @@ export const HomePage = () => {
                     </div>
                 </div>
             </section>
-            <section>
+            <section className="content-home-2">
                 <h2 className="bold-text">Deja aquí tus datos y en breve un asesor se pondrá en contacto contigo</h2>
+
+                <FormContact />
             </section>
         </main>
     );
