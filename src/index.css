@@ -190,7 +190,6 @@
 .content-form {
     width: 100%;
     padding: 20px;
-    padding-bottom: 50px;
 }
 
 .content-form .form-block-1,
@@ -244,6 +243,64 @@
     color: #ffffff;
     background-color: #192543;
     box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------------------------------------------------------------------------------ QUE NECESITO */
+
+.content-necesito {
+    padding: 10px;
+    text-align: center;
+}
+
+.necesito-title {
+    font-size: calc(2vw + 11px);
+    margin-bottom: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.necesito-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.necesito-section.hidden {
+    display: none;
+}
+
+.necesito-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 22vh;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.necesito-item img {
+    width: 20vw;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.content-parrafo-necesito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.necesito-item p {
+    font-size: calc(1vw + 10px);
+    margin: 0;
 }
 
 /* ------------------------------------------------------------------------------------ FOOTER */
@@ -344,6 +401,24 @@
         flex: 1 1 calc(50% - 1rem);
     }
 
+    /* ------------------------------------------------------------------------------------ QUE NECESITO */
+
+    .content-necesito {
+        padding: 30px;
+    }
+
+    .necesito-title {
+        font-size: calc(2vw + 15px);
+    }
+
+    .necesito-section {
+        gap: 20px;
+    }
+
+    .necesito-item {
+        height: 40vh;
+    }
+
     /* ------------------------------------------------------------------------------------ FOOTER */
 
     .footer-content {
@@ -404,12 +479,41 @@
     }
 
     .content-home-2 {
-        padding: 40px;
+        padding: 0 40px;
     }
 
     .content-home-2 h2 {
         font-size: calc(2vw + 2px);
         margin-top: -25px;
+    }
+
+    /* ------------------------------------------------------------------------------------ QUE NECESITO */
+
+    .content-necesito {
+        padding: 0 60px;
+    }
+
+    .necesito-section {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .necesito-section.hidden {
+        display: grid;
+    }
+
+    .necesito-title {
+        font-size: calc(2vw + 13px);
+        margin-bottom: 20px;
+        cursor: auto;
+    }
+
+    .necesito-item img {
+        width: 15vw;
+    }
+
+    .necesito-item p {
+        font-size: calc(1vw + 8px);
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */
@@ -467,13 +571,32 @@
         width: 32vw;
     }
 
-    .content-home-2 {
-        padding: 60px;
-    }
-
     .content-home-2 h2 {
         font-size: calc(2vw + 2px);
         margin-top: -40px;
+    }
+
+    /* ------------------------------------------------------------------------------------ QUE NECESITO */
+
+    .content-necesito {
+        padding: 0 80px;
+    }
+
+    .necesito-section {
+        gap: 20px;
+    }
+
+    .necesito-title {
+        font-size: calc(2vw + 15px);
+        margin-bottom: 30px;
+    }
+
+    .necesito-item img {
+        width: 12vw;
+    }
+
+    .necesito-item p {
+        font-size: calc(1vw + 7px);
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */
@@ -541,12 +664,30 @@
     }
 
     .content-home-2 {
-        padding: 100px;
+        padding: 0 100px;
     }
 
     .content-home-2 h2 {
         font-size: calc(2vw + 1px);
         margin-top: -50px;
+    }
+
+    /* ------------------------------------------------------------------------------------ QUE NECESITO */
+
+    .content-necesito {
+        padding: 0 110px;
+    }
+
+    .necesito-section {
+        gap: 10px 30px;
+    }
+
+    .necesito-item img {
+        width: 9vw;
+    }
+
+    .necesito-item p {
+        font-size: calc(1vw + 5px);
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */
@@ -608,12 +749,30 @@
     }
 
     .content-home-2 {
-        padding: 140px;
+        padding: 0 140px;
     }
 
     .content-home-2 h2 {
         font-size: calc(2vw + 0px);
         margin-top: -100px;
+    }
+
+    /* ------------------------------------------------------------------------------------ QUE NECESITO */
+
+    .content-necesito {
+        padding: 0 140px;
+    }
+
+    .necesito-section {
+        gap: 10px 30px;
+    }
+
+    .necesito-item img {
+        width: 8vw;
+    }
+
+    .necesito-item p {
+        font-size: calc(1vw + 4px);
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */
