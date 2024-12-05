@@ -5,6 +5,39 @@ export const useForm = (initialState, submitCallback) => {
     const [errors, setErrors] = useState({});
     const [loading, setLoading] = useState(false);
 
+    const handleFileChange = (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            const validFormats = [
+                'application/pdf',
+                'application/msword',
+                'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                'image/jpeg',
+                'image/png',
+            ];
+            const maxSize = 2 * 1024 * 1024; // Tamaño máximo: 2 MB
+
+            if (!validFormats.includes(file.type)) {
+                setErrors((prevErrors) => ({
+                    ...prevErrors,
+                    cvFile: 'Formato de archivo no permitido. Usa PDF, Word o imágenes (JPEG/PNG).',
+                }));
+                return;
+            }
+
+            if (file.size > maxSize) {
+                setErrors((prevErrors) => ({
+                    ...prevErrors,
+                    cvFile: 'El archivo es demasiado grande. Máximo 2 MB.',
+                }));
+                return;
+            }
+
+            setErrors((prevErrors) => ({ ...prevErrors, cvFile: '' }));
+            setFormData((prevState) => ({ ...prevState, cvFile: file }));
+        }
+    };
+
     const handleChange = (e) => {
         const { name, value } = e.target;
 
@@ -38,10 +71,16 @@ export const useForm = (initialState, submitCallback) => {
         setLoading(true);
 
         try {
+            const formDataToSend = new FormData();
+            formDataToSend.append('nombre', formData.nombreCompleto);
+            formDataToSend.append('telefono', formData.telefono);
+            formDataToSend.append('email', formData.email);
+            formDataToSend.append('estado', formData.estado);
+            formDataToSend.append('cvFile', formData.cvFile);
+
             const response = await fetch('http://localhost:5000/submit', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData),
+                body: formDataToSend,
             });
 
             const data = await response.json();
@@ -64,5 +103,6 @@ export const useForm = (initialState, submitCallback) => {
         loading,
         handleChange,
         handleSubmit,
+        handleFileChange,
     };
 };

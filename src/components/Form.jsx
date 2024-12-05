@@ -8,12 +8,13 @@ import { useForm } from '../hooks/useForm';
 
 export const FormContact = () => {
     const navigate = useNavigate();
-    const { formData, errors, loading, handleChange, handleSubmit } = useForm(
+    const { formData, errors, loading, handleChange, handleSubmit, handleFileChange } = useForm(
         {
             nombreCompleto: '',
             telefono: '+52',
             email: '',
             estado: '',
+            cvFile: null,
         },
         (success, data) => {
             if (success) {
@@ -109,6 +110,26 @@ export const FormContact = () => {
                     {errors.estado && (
                         <small className="text-danger" aria-live="assertive">
                             {errors.estado}
+                        </small>
+                    )}
+                </div>
+
+                {/* CURRICULUM */}
+                <div>
+                    <label htmlFor="cvFile" className="bold-text" aria-label="Carga tu curriculum">
+                        Cargar tu CV:
+                    </label>
+                    <input
+                        type="file"
+                        className="form-control"
+                        id="cvFile"
+                        name="cvFile"
+                        onChange={handleFileChange}
+                        accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                    />
+                    {errors.cvFile && (
+                        <small className="text-danger" aria-live="assertive">
+                            {errors.cvFile}
                         </small>
                     )}
                 </div>
