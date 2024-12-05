@@ -245,10 +245,65 @@
     box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
 }
 
+/* ------------------------------------------------------------------------------------ BENEFICIOS */
+
+.beneficios-title {
+    font-size: calc(2vw + 10px);
+    padding: 10px 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+.beneficio-section {
+    padding: 0 10px;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.beneficio-section.hidden {
+    display: none;
+}
+
+.beneficio-item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 90px;
+    padding: 0 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.background-circle-beneficio {
+    width: 80px;
+    height: 80px;
+    background-color: #1d3b6f;
+    background-size: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+}
+
+.content-parrafo-beneficio {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.beneficio-item p {
+    font-size: calc(1vw + 10px);
+    margin: 0;
+}
+
 /* ------------------------------------------------------------------------------------ QUE NECESITO */
 
 .content-necesito {
-    padding: 10px;
+    padding: 0 10px;
     text-align: center;
 }
 
@@ -277,7 +332,7 @@
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    height: 22vh;
+    height: 180px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -379,7 +434,7 @@
     }
 
     .content-home-2 {
-        padding: 20px;
+        padding: 0 20px;
     }
 
     .content-home-2 h2 {
@@ -401,10 +456,20 @@
         flex: 1 1 calc(50% - 1rem);
     }
 
+    /* ------------------------------------------------------------------------------------ BENEFICIOS */
+
+    .beneficios-title {
+        font-size: calc(2vw + 15px);
+    }
+
+    .content-parrafo-beneficio {
+        padding: 0 50px;
+    }
+
     /* ------------------------------------------------------------------------------------ QUE NECESITO */
 
     .content-necesito {
-        padding: 30px;
+        padding: 0 30px;
     }
 
     .necesito-title {
@@ -416,7 +481,7 @@
     }
 
     .necesito-item {
-        height: 40vh;
+        height: 220px;
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */
@@ -485,6 +550,35 @@
     .content-home-2 h2 {
         font-size: calc(2vw + 2px);
         margin-top: -25px;
+    }
+
+    /* ------------------------------------------------------------------------------------ BENEFICIOS */
+
+    .beneficios-title {
+        font-size: calc(2vw + 13px);
+        cursor: auto;
+    }
+
+    .beneficio-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0 10px;
+    }
+
+    .beneficio-section.hidden {
+        display: grid;
+    }
+
+    .beneficio-item {
+        height: 110px;
+    }
+
+    .content-parrafo-beneficio {
+        padding: 0 10px;
+    }
+
+    .beneficio-item p {
+        font-size: calc(1vw + 7px);
     }
 
     /* ------------------------------------------------------------------------------------ QUE NECESITO */
@@ -574,6 +668,27 @@
     .content-home-2 h2 {
         font-size: calc(2vw + 2px);
         margin-top: -40px;
+    }
+
+    /* ------------------------------------------------------------------------------------ BENEFICIOS */
+
+    .beneficios-title {
+        font-size: calc(2vw + 15px);
+        cursor: auto;
+    }
+
+    .beneficio-section {
+        gap: 0 20px;
+        padding: 10px;
+    }
+
+    .beneficio-item {
+        height: 120px;
+        padding: 0 10px;
+    }
+
+    .beneficio-item p {
+        font-size: calc(1vw + 7px);
     }
 
     /* ------------------------------------------------------------------------------------ QUE NECESITO */
@@ -672,6 +787,27 @@
         margin-top: -50px;
     }
 
+    /* ------------------------------------------------------------------------------------ BENEFICIOS */
+
+    .beneficio-section {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0 10px;
+    }
+
+    .beneficio-item {
+        height: 100px;
+        padding: 0 5px;
+    }
+
+    .content-parrafo-beneficio {
+        padding: 0 1px;
+    }
+
+    .beneficio-item p {
+        font-size: calc(1vw + 0px);
+    }
+
     /* ------------------------------------------------------------------------------------ QUE NECESITO */
 
     .content-necesito {
@@ -680,6 +816,10 @@
 
     .necesito-section {
         gap: 10px 30px;
+    }
+
+    .necesito-item {
+        height: 200px;
     }
 
     .necesito-item img {
@@ -757,14 +897,37 @@
         margin-top: -100px;
     }
 
+    /* ------------------------------------------------------------------------------------ BENEFICIOS */
+
+    .beneficio-section {
+        gap: 0 20px;
+    }
+
+    .beneficio-item {
+        height: 120px;
+        padding: 0 5px;
+    }
+
+    .content-parrafo-beneficio {
+        padding: 0 1px;
+    }
+
+    .beneficio-item p {
+        font-size: calc(1vw + 0px);
+    }
+
     /* ------------------------------------------------------------------------------------ QUE NECESITO */
 
     .content-necesito {
-        padding: 0 140px;
+        padding: 0 150px;
     }
 
     .necesito-section {
         gap: 10px 30px;
+    }
+
+    .necesito-item {
+        height: 220px;
     }
 
     .necesito-item img {
@@ -828,12 +991,53 @@
     }
 
     .content-home-2 {
-        padding: 210px;
+        padding: 0 210px;
     }
 
     .content-home-2 h2 {
         font-size: calc(1vw + 15px);
         margin-top: -180px;
+    }
+
+    /* ------------------------------------------------------------------------------------ BENEFICIOS */
+
+    .beneficio-section {
+        gap: 0 10px;
+    }
+
+    .beneficio-item {
+        height: 120px;
+        padding: 0 5px;
+    }
+
+    .content-parrafo-beneficio {
+        padding: 0 1px;
+    }
+
+    .beneficio-item p {
+        font-size: calc(1vw + -1px);
+    }
+
+    /* ------------------------------------------------------------------------------------ QUE NECESITO */
+
+    .content-necesito {
+        padding: 0 220px;
+    }
+
+    .necesito-section {
+        gap: 10px 10px;
+    }
+
+    .necesito-item {
+        height: 100%;
+    }
+
+    .necesito-item img {
+        width: 7vw;
+    }
+
+    .necesito-item p {
+        font-size: calc(1vw + 3px);
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */

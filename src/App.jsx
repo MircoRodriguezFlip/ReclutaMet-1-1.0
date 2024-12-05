@@ -5,7 +5,7 @@ import { Requisitos } from './components/Requisitos';
 import { OfrecemosPage } from './components/OfrecemosPage';
 import { ContactPage } from './components/ContactPage';
 import { Footer } from './components/footer';
-import { QueNecesito } from './components/QueNecesito';
+import { Beneficios } from './components/Beneficios';
 
 function App() {
     return (
@@ -14,10 +14,10 @@ function App() {
 
             <Routes>
                 <Route path="/" element={<HomePage />} />
-                <Route path="/Requisitos" element={<QueNecesito />} />
-                <Route path="/Ofrecemos" element={<OfrecemosPage />} />
-                <Route path="/Contacto" element={<ContactPage />} />
-                <Route path="/Otro" element={<ContactPage />} />
+                <Route path="/requisitos" element={<Beneficios />} />
+                <Route path="/ofrecemos" element={<OfrecemosPage />} />
+                <Route path="/contacto" element={<ContactPage />} />
+                <Route path="/otro" element={<ContactPage />} />
             </Routes>
 
             <Footer />

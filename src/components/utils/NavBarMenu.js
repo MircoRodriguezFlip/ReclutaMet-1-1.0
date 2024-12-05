@@ -1,7 +1,7 @@
 export const navLinks = [
     { to: '/', label: 'Inicio', title: 'Ir al inicio' },
-    { to: '/Requisitos', label: 'Requisitos', title: 'Requisitos' },
-    { to: '/Ofrecemos', label: 'Ofrecemos', title: 'Ofrecemos' },
-    { to: '/Contacto', label: 'Contacto', title: 'Contáctanos' },
-    { to: '/Otro', label: 'Otro', title: 'otro' },
+    { to: '/requisitos', label: 'Requisitos', title: 'Requisitos' },
+    { to: '/ofrecemos', label: 'Ofrecemos', title: 'Ofrecemos' },
+    { to: '/contacto', label: 'Contacto', title: 'Contáctanos' },
+    { to: '/otro', label: 'Otro', title: 'otro' },
 ];

@@ -39,6 +39,10 @@ export const HomePage = () => {
             </section>
 
             <section>
+                <Beneficios />
+            </section>
+
+            <section>
                 <QueNecesito />
             </section>
         </main>
