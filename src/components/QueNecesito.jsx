@@ -19,42 +19,48 @@ export const QueNecesito = () => {
                 ¿Que necesito para ser Agente?
             </h1>
             <section className={`necesito-section ${isVisible ? 'visible' : 'hidden'}`}>
-                <div className="necesito-item">
-                    <img src={ImgNecesito1} alt="sombrero de recien graduado" loading="lazy" />
-                    <div className="content-parrafo-necesito">
-                        <p className="light-text">Licenciatura terminada, pasante o bachillerato</p>
+                <div className="necesito-items">
+                    <div className="necesito-item">
+                        <img src={ImgNecesito1} alt="sombrero de recien graduado" loading="lazy" />
+                        <div className="content-parrafo-necesito">
+                            <p className="light-text">Licenciatura terminada, pasante o bachillerato</p>
+                        </div>
+                    </div>
+                    <div className="necesito-item">
+                        <img src={ImgNecesito2} alt="ampolleta con un cerebro dentro teniendo una idea" loading="lazy" />
+                        <div className="content-parrafo-necesito">
+                            <p className="light-text">Alta iniciativa empresarial</p>
+                        </div>
+                    </div>
+                    <div className="necesito-item">
+                        <img src={ImgNecesito3} alt="3 personas enlazadas" loading="lazy" />
+                        <div className="content-parrafo-necesito">
+                            <p className="light-text">Facilidad para relacionarse</p>
+                        </div>
+                    </div>
+                    <div className="necesito-item">
+                        <img src={ImgNecesito4} alt="grafica de dinero en aumento" loading="lazy" />
+                        <div className="content-parrafo-necesito">
+                            <p className="light-text">Expectativa económica mayor a $50.000 pesos</p>
+                        </div>
+                    </div>
+                    <div className="necesito-item">
+                        <img src={ImgNecesito5} alt="3 personas posando para una foto con la empresa a sus espaldas" loading="lazy" />
+                        <div className="content-parrafo-necesito">
+                            <p className="light-text">Imagen corporativa</p>
+                        </div>
+                    </div>
+                    <div className="necesito-item">
+                        <img src={ImgNecesito6} alt="2 personas llegando a un acuerdo mientras se dan la mano" loading="lazy" />
+                        <div className="content-parrafo-necesito">
+                            <p className="light-text">habilidad comercial</p>
+                        </div>
                     </div>
                 </div>
-                <div className="necesito-item">
-                    <img src={ImgNecesito2} alt="ampolleta con un cerebro dentro teniendo una idea" loading="lazy" />
-                    <div className="content-parrafo-necesito">
-                        <p className="light-text">Alta iniciativa empresarial</p>
-                    </div>
-                </div>
-                <div className="necesito-item">
-                    <img src={ImgNecesito3} alt="3 personas enlazadas" loading="lazy" />
-                    <div className="content-parrafo-necesito">
-                        <p className="light-text">Facilidad para relacionarse</p>
-                    </div>
-                </div>
-                <div className="necesito-item">
-                    <img src={ImgNecesito4} alt="grafica de dinero en aumento" loading="lazy" />
-                    <div className="content-parrafo-necesito">
-                        <p className="light-text">Expectativa económica mayor a $50.000 pesos</p>
-                    </div>
-                </div>
-                <div className="necesito-item">
-                    <img src={ImgNecesito5} alt="3 personas posando para una foto con la empresa a sus espaldas" loading="lazy" />
-                    <div className="content-parrafo-necesito">
-                        <p className="light-text">Imagen corporativa</p>
-                    </div>
-                </div>
-                <div className="necesito-item">
-                    <img src={ImgNecesito6} alt="2 personas llegando a un acuerdo mientras se dan la mano" loading="lazy" />
-                    <div className="content-parrafo-necesito">
-                        <p className="light-text">habilidad comercial</p>
-                    </div>
-                </div>
+                {/* Botón para cerrar */}
+                <button className="close-section-btn bold-text" onClick={toggleVisibility}>
+                    Cerrar
+                </button>
             </section>
         </div>
     );

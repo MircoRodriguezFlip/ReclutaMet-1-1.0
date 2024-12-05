@@ -38,6 +38,11 @@ export const Beneficios = () => {
                         </div>
                     </div>
                 ))}
+
+                {/* Botón para cerrar */}
+                <button className="close-section-btn bold-text" onClick={toggleVisibility}>
+                    Cerrar
+                </button>
             </section>
         </div>
     );
