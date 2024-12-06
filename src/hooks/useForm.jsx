@@ -72,8 +72,17 @@ export const useForm = (initialState, submitCallback) => {
         }
 
         if (!formData.estado) newErrors.estado = 'Selecciona un estado válido.';
-        if (!formData.cvFile) newErrors.cvFile = 'Por favor, sube un archivo.';
         if (!formData.contactoPreferido) newErrors.contactoPreferido = 'Selecciona un método de contacto.';
+
+        // El archivo CV solo se valida si es necesario
+        if (
+            formData.cvFile &&
+            !formData.cvFile.type.match(
+                /application\/pdf|application\/msword|application\/vnd.openxmlformats-officedocument.wordprocessingml.document|image\/jpeg|image\/png/
+            )
+        ) {
+            newErrors.cvFile = 'Formato de archivo no permitido. Usa PDF, Word o imágenes (JPEG/PNG).';
+        }
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
@@ -91,7 +100,11 @@ export const useForm = (initialState, submitCallback) => {
             formDataToSend.append('telefono', formData.telefono);
             formDataToSend.append('email', formData.email);
             formDataToSend.append('estado', formData.estado);
-            formDataToSend.append('cvFile', formData.cvFile);
+
+            // Solo agregamos el archivo si está presente
+            if (formData.cvFile) {
+                formDataToSend.append('cvFile', formData.cvFile);
+            }
 
             const response = await fetch('http://localhost:5000/submit', {
                 method: 'POST',

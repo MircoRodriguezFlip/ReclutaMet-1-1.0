@@ -22,41 +22,33 @@ app.post('/submit', upload.single('cvFile'), async (req, res) => {
     const { nombre, telefono, email, estado } = req.body;
     const cvFile = req.file;
 
-    // Validar el archivo
-    const allowedFormats = [
-        'application/pdf',
-        'application/msword',
-        'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-        'image/jpeg',
-        'image/png',
-    ];
-    const maxSize = 2 * 1024 * 1024; // Tamaño máximo: 2 MB
-
-    if (!cvFile) {
-        return res.status(400).json({ message: 'El archivo es obligatorio.' });
-    }
-
-    if (!allowedFormats.includes(cvFile.mimetype)) {
-        return res.status(400).json({ message: 'Formato de archivo no permitido. Usa PDF, Word o imágenes (JPEG/PNG).' });
-    }
-
-    if (cvFile.size > maxSize) {
-        return res.status(400).json({ message: 'El archivo es demasiado grande. Máximo 2 MB.' });
-    }
-
     try {
-        // Subir archivo a Filestack
-        const fileUrl = await uploadFileToFilestack(cvFile);
+        // Si no hay archivo, continuamos sin intentar subir nada a Filestack
+        let fileUrl = null;
+        if (cvFile) {
+            // Validar el archivo
+            const allowedFormats = [
+                'application/pdf',
+                'application/msword',
+                'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                'image/jpeg',
+                'image/png',
+            ];
+            const maxSize = 2 * 1024 * 1024; // Tamaño máximo: 2 MB
 
-        console.log({
-            nombre_completo: nombre,
-            telefono: telefono,
-            email: email,
-            estado: estado,
-            cvFile: [{ url: fileUrl }],
-        });
+            if (!allowedFormats.includes(cvFile.mimetype)) {
+                return res.status(400).json({ message: 'Formato de archivo no permitido. Usa PDF, Word o imágenes (JPEG/PNG).' });
+            }
 
-        // Guardar datos en Airtable
+            if (cvFile.size > maxSize) {
+                return res.status(400).json({ message: 'El archivo es demasiado grande. Máximo 2 MB.' });
+            }
+
+            // Subir archivo a Filestack si hay archivo
+            fileUrl = await uploadFileToFilestack(cvFile);
+        }
+
+        // Guardar los datos en Airtable
         const response = await axios.post(
             `https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/${process.env.AIRTABLE_TABLE_NAME}`,
             {
@@ -65,7 +57,7 @@ app.post('/submit', upload.single('cvFile'), async (req, res) => {
                     telefono: telefono,
                     email: email,
                     estado: estado,
-                    test: [{ url: fileUrl }], // Enlace del archivo
+                    test: fileUrl ? [{ url: fileUrl }] : [], // Solo agregar el archivo si existe
                 },
             },
             {
@@ -76,10 +68,10 @@ app.post('/submit', upload.single('cvFile'), async (req, res) => {
             }
         );
 
-        res.status(200).json({ message: 'Datos enviados correctamente', data: response.data });
+        res.status(200).json({ message: 'Datos enviados correctamente.' });
     } catch (error) {
-        console.error('Error al enviar los datos a Airtable:', error);
-        res.status(500).json({ message: 'Hubo un error al enviar los datos' });
+        console.error(error);
+        res.status(500).json({ message: 'Hubo un problema al procesar el formulario.' });
     }
 });
 
