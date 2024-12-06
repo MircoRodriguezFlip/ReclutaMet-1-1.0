@@ -405,6 +405,100 @@
     color: #181e2c;
 }
 
+/* ------------------------------------------------------------------------------------ REQUISITOS */
+
+.content-requisitos {
+    padding: 0 10px;
+}
+
+.content-requisito-1 h1 {
+    font-size: 5vw;
+    text-align: center;
+    padding-top: 6vw;
+    padding-bottom: 3vw;
+}
+
+.content-requisito-1 h2 {
+    font-size: 4vw;
+    text-align: center;
+}
+
+.content-requisito-1 p {
+    font-size: calc(1vw + 9px);
+    text-align: justify;
+    padding: 0 8vw;
+}
+
+.content-requisito-2 h3 {
+    font-size: 4vw;
+    text-align: justify;
+    padding: 2vw 6vw;
+}
+
+.content-requisito-2 li {
+    padding-bottom: 5vw;
+    font-size: calc(1vw + 9px);
+}
+
+/* ------------------------------------------------------------------------------------ REQUISITOS */
+
+.content-ofrecemos-1 h1 {
+    font-size: 5vw;
+    text-align: center;
+    padding-top: 6vw;
+    padding-bottom: 3vw;
+}
+
+.content-ofrecemos-1 h2 {
+    font-size: 4vw;
+    text-align: center;
+}
+
+.content-ofrecemos-1 p,
+.content-ofrecemos-3 p {
+    font-size: calc(1vw + 9px);
+    text-align: justify;
+    padding: 0 8vw;
+}
+
+.content-ofrecemos-2 h3,
+.content-ofrecemos-3 h3 {
+    font-size: 4vw;
+    text-align: justify;
+    padding: 2vw 6vw;
+}
+
+.content-ofrecemos-2 li {
+    padding-bottom: 5vw;
+    font-size: calc(1vw + 9px);
+}
+
+/* ------------------------------------------------------------------------------------ ERES AGENTE */
+
+.content-agente-1 h1 {
+    font-size: 5vw;
+    text-align: center;
+    padding-top: 6vw;
+    padding-bottom: 3vw;
+}
+
+.content-agente-1 h2 {
+    font-size: 4vw;
+    text-align: justify;
+    padding: 0 3vw;
+}
+
+.content-agente-2 h3 {
+    font-size: 4vw;
+    text-align: center;
+    padding: 2vw 5vw;
+}
+
+.content-agente-2 li {
+    padding-bottom: 5vw;
+    font-size: calc(1vw + 9px);
+}
+
 /* ------------------------------------------------------------------------------------ FOOTER */
 
 .footer {
@@ -808,7 +902,7 @@
     }
 
     .reclutamet-text {
-        padding-top: 30px;
+        padding-top: 25px;
     }
 
     .menu-nav {

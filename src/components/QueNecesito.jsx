@@ -41,7 +41,7 @@ export const QueNecesito = () => {
                     <div className="necesito-item">
                         <img src={ImgNecesito4} alt="grafica de dinero en aumento" loading="lazy" />
                         <div className="content-parrafo-necesito">
-                            <p className="light-text">Expectativa económica mayor a $50.000 pesos</p>
+                            <p className="light-text">Expectativa económica mayor a $100.000 pesos</p>
                         </div>
                     </div>
                     <div className="necesito-item">

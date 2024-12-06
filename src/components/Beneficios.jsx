@@ -25,11 +25,11 @@ export const Beneficios = () => {
                     { img: ImgBeneficio1, text: 'Desarollo/capacitación permanente y constante.' },
                     { img: ImgBeneficio2, text: 'Crecimiento profesional' },
                     { img: ImgBeneficio3, text: 'Capacitación en la prospección y venta' },
-                    { img: ImgBeneficio4, text: 'Ingresos por comisiones y bonos mayores a 30 mil pesos mensualmente sin tope' },
+                    { img: ImgBeneficio4, text: 'Ingresos por comisiones y bonos mayores a 100 mil pesos mensualmente sin tope' },
                     { img: ImgBeneficio5, text: 'Seminarios nacionales e internacionales' },
-                    { img: ImgBeneficio6, text: 'Increíble ambiente de trabajo' },
-                    { img: ImgBeneficio7, text: 'Si eres de Monterrey 30% presencial y si no eres de Monterrey puedes hacer Home Office' },
-                    { img: ImgBeneficio8, text: 'Horarios cómodos y flexibles' },
+                    { img: ImgBeneficio6, text: 'Metodología 100% probada desde hace mas de 150 años' },
+                    { img: ImgBeneficio7, text: 'Presencia a nivel nacional' },
+                    { img: ImgBeneficio8, text: 'Posibilidad de administrar tu tiempo' },
                 ].map((beneficio, index) => (
                     <div className="beneficio-item" key={index}>
                         <div className="background-circle-beneficio" style={{ backgroundImage: `url(${beneficio.img})` }}></div>
