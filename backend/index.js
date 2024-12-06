@@ -3,10 +3,15 @@ const express = require('express');
 const axios = require('axios');
 const app = express();
 const cors = require('cors');
+const multer = require('multer');
+const filestack = require('filestack-js');
+
+// Inicializa Filestack
+const client = filestack.init(process.env.FILESTACK_API_KEY);
+
+// Configura middlewares
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
-const multer = require('multer');
-const path = require('path');
 
 // Configuración de multer
 const storage = multer.memoryStorage();
@@ -40,15 +45,15 @@ app.post('/submit', upload.single('cvFile'), async (req, res) => {
     }
 
     try {
-        // Subir archivo a Cloudinary
-        const fileUrl = await uploadFileToCloudinary(cvFile);
+        // Subir archivo a Filestack
+        const fileUrl = await uploadFileToFilestack(cvFile);
 
         console.log({
             nombre_completo: nombre,
             telefono: telefono,
             email: email,
             estado: estado,
-            cvFile: [{ url: fileUrl }], // Verifica el formato aquí
+            cvFile: [{ url: fileUrl }],
         });
 
         // Guardar datos en Airtable
@@ -78,30 +83,18 @@ app.post('/submit', upload.single('cvFile'), async (req, res) => {
     }
 });
 
-// Función para subir archivo a Cloudinary
-async function uploadFileToCloudinary(file) {
-    const cloudinary = require('cloudinary').v2;
-    cloudinary.config({
-        cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-        api_key: process.env.CLOUDINARY_API_KEY,
-        api_secret: process.env.CLOUDINARY_API_SECRET,
-    });
-
-    return new Promise((resolve, reject) => {
-        const stream = cloudinary.uploader.upload_stream(
-            { folder: 'cv_files' }, // Opcional: carpeta en Cloudinary
-            (error, result) => {
-                if (error) {
-                    reject(new Error('Error al subir el archivo a Cloudinary: ' + error.message));
-                } else {
-                    resolve(result.secure_url); // Devuelve la URL segura del archivo subido
-                }
-            }
-        );
-
-        // Escribe el archivo en el flujo
-        stream.end(file.buffer);
-    });
+// Función para subir archivo a Filestack
+async function uploadFileToFilestack(file) {
+    try {
+        const options = {
+            onProgress: (progress) => console.log('Progreso de carga:', progress),
+        };
+        const result = await client.upload(file.buffer, options);
+        return result.url;
+    } catch (error) {
+        console.error('Error al cargar archivo en Filestack:', error);
+        throw new Error('Error al cargar archivo en Filestack.');
+    }
 }
 
 // Configurar el servidor para escuchar en el puerto 5000
