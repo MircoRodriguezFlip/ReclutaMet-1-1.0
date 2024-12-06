@@ -61,9 +61,11 @@ export const HomePage = () => {
 
             <section>
                 <p className="container parrafo2 light-text">
-                    El crédito Mejoravit permite obtener hasta $156,445.00 pesos para remodelar o ampliar tu vivienda, dependiendo de tu plazo,
-                    capacidad de pago y saldo en la subcuenta de vivienda. Ofrece una tasa de interés anual del 11%, y es accesible con solo 6 meses
-                    cotizando en el IMSS con el mismo patrón.
+                    Ya sea que cuentes con cédula de Agente o estés recién comenzando en el mundo de las ventas en MetLife, Reclutamet te ofrece todo
+                    lo necesario para impulsar tu carrera. Te brindamos capacitación continua, asesoramiento personalizado y un esquema de comisiones
+                    altamente competitivo en la venta de seguros. Buscamos personas comprometidas, con educación mínima de preparatoria, edad ideal
+                    entre 30 y 50 años, con mentalidad ganadora y disciplina. Juntos, te ayudaremos a obtener tu cédula y/o a consolidar una carrera
+                    exitosa con proyección a largo plazo. ¡Estamos listos para apoyarte en cada paso hacia el éxito!
                 </p>
             </section>
         </main>

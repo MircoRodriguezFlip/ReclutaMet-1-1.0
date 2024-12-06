@@ -59,6 +59,7 @@ export const useForm = (initialState, submitCallback) => {
         if (!formData.telefono.match(/^\+52\d{10}$/)) newErrors.telefono = 'Ingresa un número de teléfono válido.';
         if (!formData.email.trim() || !formData.email.includes('@')) newErrors.email = 'Ingresa un correo electrónico válido.';
         if (!formData.estado) newErrors.estado = 'Selecciona un estado válido.';
+        if (!formData.cvFile) newErrors.cvFile = 'Por favor, sube un archivo.';
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
