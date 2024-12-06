@@ -56,10 +56,24 @@ export const useForm = (initialState, submitCallback) => {
         const newErrors = {};
 
         if (!formData.nombreCompleto.trim()) newErrors.nombreCompleto = 'Completa este campo.';
-        if (!formData.telefono.match(/^\+52\d{10}$/)) newErrors.telefono = 'Ingresa un número de teléfono válido.';
-        if (!formData.email.trim() || !formData.email.includes('@')) newErrors.email = 'Ingresa un correo electrónico válido.';
+
+        // Validar teléfono solo si el método de contacto es WhatsApp o Llamada Telefónica
+        if (['whatsapp', 'llamada'].includes(formData.contactoPreferido)) {
+            if (!formData.telefono.match(/^\+52\d{10}$/)) {
+                newErrors.telefono = 'Ingresa un número de teléfono válido.';
+            }
+        }
+
+        // Validar correo electrónico solo si el método de contacto es Correo Electrónico
+        if (formData.contactoPreferido === 'email') {
+            if (!formData.email.trim() || !formData.email.includes('@')) {
+                newErrors.email = 'Ingresa un correo electrónico válido.';
+            }
+        }
+
         if (!formData.estado) newErrors.estado = 'Selecciona un estado válido.';
         if (!formData.cvFile) newErrors.cvFile = 'Por favor, sube un archivo.';
+        if (!formData.contactoPreferido) newErrors.contactoPreferido = 'Selecciona un método de contacto.';
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;

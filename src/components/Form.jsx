@@ -15,6 +15,7 @@ export const FormContact = () => {
             email: '',
             estado: '',
             cvFile: null,
+            contactoPreferido: '',
         },
         (success, data) => {
             if (success) {
@@ -58,42 +59,70 @@ export const FormContact = () => {
                     )}
                 </div>
 
-                {/* TELEFONO */}
+                {/* ¿CÓMO QUIERES QUE TE CONTACTEMOS? */}
                 <div>
-                    <label htmlFor="telefono" className="bold-text" aria-label="Telefono del usuario">
-                        Teléfono:
+                    <label htmlFor="contactoPreferido" className="bold-text" aria-label="Método de contacto preferido">
+                        ¿Cómo quieres que te contactemos?
                     </label>
-                    <input
-                        type="text"
+                    <select
                         className="form-control"
-                        id="telefono"
-                        name="telefono"
-                        value={formData.telefono}
+                        id="contactoPreferido"
+                        name="contactoPreferido"
+                        value={formData.contactoPreferido}
                         onChange={handleChange}
-                        maxLength="13"
-                    />
-                    {errors.telefono && (
+                    >
+                        <option value="">Selecciona una opción</option>
+                        <option value="whatsapp">WhatsApp</option>
+                        <option value="llamada">Llamada Telefónica</option>
+                        <option value="email">Correo Electrónico</option>
+                    </select>
+                    {errors.contactoPreferido && (
                         <small className="text-danger" aria-live="assertive">
-                            {errors.telefono}
+                            {errors.contactoPreferido}
                         </small>
                     )}
                 </div>
+
+                {/* TELÉFONO */}
+                {['whatsapp', 'llamada'].includes(formData.contactoPreferido) && (
+                    <div>
+                        <label htmlFor="telefono" className="bold-text" aria-label="Teléfono del usuario">
+                            Teléfono:
+                        </label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="telefono"
+                            name="telefono"
+                            value={formData.telefono}
+                            onChange={handleChange}
+                            maxLength="13"
+                        />
+                        {errors.telefono && (
+                            <small className="text-danger" aria-live="assertive">
+                                {errors.telefono}
+                            </small>
+                        )}
+                    </div>
+                )}
+
+                {/* EMAIL */}
+                {formData.contactoPreferido === 'email' && (
+                    <div>
+                        <label htmlFor="email" className="bold-text" aria-label="Correo Electrónico del usuario">
+                            Correo Electrónico:
+                        </label>
+                        <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleChange} />
+                        {errors.email && (
+                            <small className="text-danger" aria-live="assertive">
+                                {errors.email}
+                            </small>
+                        )}
+                    </div>
+                )}
             </div>
 
             <div className="form-block-2">
-                {/* EMAIL */}
-                <div>
-                    <label htmlFor="email" className="bold-text" aria-label="Email del usuario">
-                        Correo Electrónico:
-                    </label>
-                    <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleChange} />
-                    {errors.email && (
-                        <small className="text-danger" aria-live="assertive">
-                            {errors.email}
-                        </small>
-                    )}
-                </div>
-
                 {/* ESTADO */}
                 <div>
                     <label htmlFor="estado" className="bold-text" aria-label="Estado donde vive del usuario">
