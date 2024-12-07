@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
@@ -8,7 +7,7 @@ import { useForm } from '../hooks/useForm';
 
 export const FormContact = () => {
     const navigate = useNavigate();
-    const { formData, errors, loading, handleChange, handleSubmit, handleFileChange } = useForm(
+    const { formData, errors, loading, handleChange, handleSubmit, handleFileChange, showExtraFields, toggleExtraFields } = useForm(
         {
             nombreCompleto: '',
             telefono: '+52',
@@ -16,6 +15,8 @@ export const FormContact = () => {
             estado: '',
             cvFile: null,
             contactoPreferido: '',
+            cedula: '',
+            fechaVencimiento: '',
         },
         (success, data) => {
             if (success) {
@@ -162,6 +163,56 @@ export const FormContact = () => {
                         </small>
                     )}
                 </div>
+
+                {/* CHECKBOX PARA MOSTRAR CAMPOS EXTRAS */}
+                <div>
+                    <label htmlFor="extraFieldsCheckbox" className="bold-text">
+                        ¿Tienes cédula?
+                    </label>
+                    <input
+                        type="checkbox"
+                        id="extraFieldsCheckbox"
+                        checked={showExtraFields}
+                        onChange={toggleExtraFields}
+                        className="form-check-input"
+                    />
+                </div>
+
+                {/* CAMPOS ADICIONALES */}
+                {showExtraFields && (
+                    <>
+                        <div>
+                            <label htmlFor="cedula" className="bold-text">
+                                Cédula:
+                            </label>
+                            <input type="text" id="cedula" name="cedula" value={formData.cedula} onChange={handleChange} className="form-control" />
+                            {errors.cedula && (
+                                <small className="text-danger" aria-live="assertive">
+                                    {errors.cedula}
+                                </small>
+                            )}
+                        </div>
+                        <div>
+                            <label htmlFor="fechaVencimiento" className="bold-text">
+                                Fecha de vencimiento:
+                            </label>
+                            <input
+                                type="date"
+                                id="fechaVencimiento"
+                                name="fechaVencimiento"
+                                value={formData.fechaVencimiento}
+                                onChange={handleChange}
+                                className="form-control"
+                                min={new Date().toISOString().split('T')[0]}
+                            />
+                            {errors.fechaVencimiento && (
+                                <small className="text-danger" aria-live="assertive">
+                                    {errors.fechaVencimiento}
+                                </small>
+                            )}
+                        </div>
+                    </>
+                )}
             </div>
 
             {/* BOTÓN DE ENVÍO */}

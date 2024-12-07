@@ -4,6 +4,11 @@ export const useForm = (initialState, submitCallback) => {
     const [formData, setFormData] = useState(initialState);
     const [errors, setErrors] = useState({});
     const [loading, setLoading] = useState(false);
+    const [showExtraFields, setShowExtraFields] = useState(false);
+
+    const toggleExtraFields = () => {
+        setShowExtraFields(!showExtraFields);
+    };
 
     const handleFileChange = (event) => {
         const file = event.target.files[0];
@@ -74,6 +79,16 @@ export const useForm = (initialState, submitCallback) => {
         if (!formData.estado) newErrors.estado = 'Selecciona un estado válido.';
         if (!formData.contactoPreferido) newErrors.contactoPreferido = 'Selecciona un método de contacto.';
 
+        // Validar campos de cédula y fecha de vencimiento si el checkbox está marcado
+        if (showExtraFields) {
+            if (!formData.cedula.trim()) {
+                newErrors.cedula = 'La cédula es obligatoria.';
+            }
+            if (!formData.fechaVencimiento) {
+                newErrors.fechaVencimiento = 'La fecha de vencimiento es obligatoria.';
+            }
+        }
+
         // El archivo CV solo se valida si es necesario
         if (
             formData.cvFile &&
@@ -106,6 +121,15 @@ export const useForm = (initialState, submitCallback) => {
                 formDataToSend.append('cvFile', formData.cvFile);
             }
 
+            // Agregar cédula y fecha de vencimiento solo si están rellenos
+            if (formData.cedula.trim()) {
+                formDataToSend.append('cedula', formData.cedula.trim());
+            }
+
+            if (formData.fechaVencimiento) {
+                formDataToSend.append('fechaVencimiento', formData.fechaVencimiento);
+            }
+
             const response = await fetch('http://localhost:5000/submit', {
                 method: 'POST',
                 body: formDataToSend,
@@ -132,5 +156,7 @@ export const useForm = (initialState, submitCallback) => {
         handleChange,
         handleSubmit,
         handleFileChange,
+        showExtraFields,
+        toggleExtraFields,
     };
 };

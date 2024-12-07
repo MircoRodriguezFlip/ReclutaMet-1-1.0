@@ -19,7 +19,7 @@ const upload = multer({ storage });
 
 // Ruta para manejar el envío de datos y archivo
 app.post('/submit', upload.single('cvFile'), async (req, res) => {
-    const { nombre, telefono, email, estado } = req.body;
+    const { nombre, telefono, email, estado, cedula, fechaVencimiento } = req.body;
     const cvFile = req.file;
 
     try {
@@ -57,7 +57,9 @@ app.post('/submit', upload.single('cvFile'), async (req, res) => {
                     telefono: telefono,
                     email: email,
                     estado: estado,
-                    test: fileUrl ? [{ url: fileUrl }] : [], // Solo agregar el archivo si existe
+                    cedula: cedula,
+                    fecha_vec_cedula: fechaVencimiento,
+                    test: fileUrl ? [{ url: fileUrl }] : [],
                 },
             },
             {
