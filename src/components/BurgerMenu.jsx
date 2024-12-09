@@ -40,10 +40,10 @@ export const BurgerMenu = () => {
                 {isScrolled && <FontAwesomeIcon icon={faTimes} className="close-menu-icon" onClick={toggleMenu} />}
 
                 {/* Opciones del menú */}
-                <ul className="bold-text">
+                <ul className="burger-menu-nav bold-text">
                     {navLinks.map((link, index) => (
-                        <div className="link-container" key={index}>
-                            <li>
+                        <div className="link-container" key={link.id}>
+                            <li className={index === navLinks.length - 1 ? 'last-item' : ''}>
                                 <NavLink to={link.to} onClick={toggleMenu} title={link.title}>
                                     {link.label}
                                 </NavLink>

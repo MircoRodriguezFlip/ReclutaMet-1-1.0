@@ -30,8 +30,9 @@
 
 .navbar {
     display: flex;
-    background-color: #192543;
-    color: white;
+    background-color: #e9e9e9;
+    color: rgb(0, 0, 0);
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 1);
     width: 100%;
     z-index: 99;
 }
@@ -50,11 +51,12 @@
     pointer-events: none;
 }
 
-.reclutamet-text {
-    padding-top: 10px;
-    font-size: 12px;
-    white-space: nowrap;
+.logo-navbar-2 {
+    height: 15px;
+    width: auto;
+    margin-top: 5px;
     user-select: none;
+    pointer-events: none;
 }
 
 .menu-nav {
@@ -68,7 +70,7 @@
     top: 12px;
     right: 20px;
     font-size: 32px;
-    color: white;
+    color: rgb(0, 0, 0);
     cursor: pointer;
     z-index: 100;
 }
@@ -80,7 +82,7 @@
     right: 0;
     width: 56%;
     height: 100%;
-    background: linear-gradient(135deg, #445068, #293753, #445068);
+    background-color: #e9e9e9;
     padding-top: 80px;
     box-shadow: -4px 0 10px rgba(0, 0, 0, 0.3);
     transform: translateX(100%);
@@ -109,7 +111,7 @@
     top: 10px;
     right: 15px;
     font-size: 24px;
-    color: white;
+    color: rgb(0, 0, 0);
     cursor: pointer;
     z-index: 100;
 }
@@ -121,15 +123,19 @@
 /* --------- ESTILOS PARA LINKS*/
 
 .menu-nav li a,
-.mobile-nav-menu li a {
+.burger-menu-nav li a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
-.menu-nav li a.active,
-.mobile-nav-menu li a.active {
+.menu-nav li:last-child a,
+.burger-menu-nav li.last-item a {
+    color: #0065a8;
     font-weight: bold;
-    color: #9fc750;
+}
+
+.menu-nav li a.active {
+    font-weight: bold;
 }
 
 /* ------------------------------------------------------------------------------------ HOMEPAGE */
@@ -536,9 +542,9 @@
         padding-left: 30px;
     }
 
-    .reclutamet-text {
-        padding-top: 15px;
-        font-size: 15px;
+    .logo-navbar-2 {
+        height: 20px;
+        margin-top: 10px;
     }
 
     /* --------------------------------- MENU HAMBURGESA*/
@@ -653,6 +659,11 @@
         padding-left: 10px;
     }
 
+    .logo-navbar-2 {
+        height: 15px;
+        margin-top: 7px;
+    }
+
     .menu-nav {
         display: flex;
         list-style: none;
@@ -661,10 +672,6 @@
         margin: 0;
         padding-right: 10px;
         font-size: 16px;
-    }
-
-    .reclutamet-text {
-        padding-top: 11px;
     }
 
     .linea-separadora {
@@ -791,8 +798,9 @@
         padding-left: 40px;
     }
 
-    .reclutamet-text {
-        padding-top: 22px;
+    .logo-navbar-2 {
+        height: 20px;
+        margin-top: 9px;
     }
 
     .menu-nav {
@@ -901,8 +909,8 @@
         padding-left: 70px;
     }
 
-    .reclutamet-text {
-        padding-top: 25px;
+    .logo-navbar-2 {
+        margin-top: 15px;
     }
 
     .menu-nav {
@@ -1016,8 +1024,8 @@
         padding-left: 80px;
     }
 
-    .reclutamet-text {
-        padding-top: 39px;
+    .logo-navbar-2 {
+        margin-top: 25px;
     }
 
     .menu-nav {
@@ -1128,8 +1136,8 @@
         padding-left: 130px;
     }
 
-    .reclutamet-text {
-        padding-top: 47px;
+    .logo-navbar-2 {
+        margin-top: 35px;
     }
 
     .menu-nav {
