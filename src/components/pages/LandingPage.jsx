@@ -1,5 +1,6 @@
 import MetLifeIcon from '../../../public/images/FavIcon.webp';
 import { Section1 } from '../imports/Section1';
+import { Section2 } from '../imports/section2';
 
 export const LadingPage = () => {
     return (
@@ -11,6 +12,20 @@ export const LadingPage = () => {
 
             <section>
                 <Section1 />
+            </section>
+
+            <section>
+                <Section2 />
+            </section>
+
+            <section>
+                <p className="parrafo2 light-text">
+                    Ya sea que cuentes con cédula de Agente o estés recién comenzando en el mundo de las ventas en MetLife, Reclutamet te ofrece todo
+                    lo necesario para impulsar tu carrera. Te brindamos capacitación continua, asesoramiento personalizado y un esquema de comisiones
+                    altamente competitivo en la venta de seguros. Buscamos personas comprometidas, con educación mínima de preparatoria, edad ideal
+                    entre 30 y 50 años, con mentalidad ganadora y disciplina. Juntos, te ayudaremos a obtener tu cédula y/o a consolidar una carrera
+                    exitosa con proyección a largo plazo. ¡Estamos listos para apoyarte en cada paso hacia el éxito!
+                </p>
             </section>
         </main>
     );

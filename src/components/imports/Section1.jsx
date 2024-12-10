@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import ImgSection1 from '../../assets/images/Imagen section 1.webp';
 
 export const Section1 = () => {
@@ -10,7 +11,9 @@ export const Section1 = () => {
                         profesionales que te guiarán en cada paso hacia el éxito.
                     </p>
 
-                    <button className="boton-section-1 bold-text">Contáctanos</button>
+                    <NavLink to="/eres-agente">
+                        <button className="boton-section-1 bold-text">Contáctanos</button>
+                    </NavLink>
                 </div>
 
                 <div className="section-1-2">

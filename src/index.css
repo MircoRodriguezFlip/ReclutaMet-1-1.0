@@ -158,6 +158,12 @@
     width: 50px;
 }
 
+.parrafo2 {
+    font-size: 12px;
+    text-align: justify;
+    padding: 20px 20px;
+}
+
 /* ----------------------------------------------------- SECTION 1 */
 
 .section-1-container {
@@ -175,7 +181,7 @@
 }
 
 .boton-section-1 {
-    margin: 15px 0;
+    margin: 10px 0;
     background: linear-gradient(to left, #0065a8 20%, #1497ee);
     color: #e9e9e9;
     border: none;
@@ -184,11 +190,17 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
+.close-section-btn:hover,
+.boton-section-1:hover {
+    background: linear-gradient(to left, #1497ee 20%, #0065a8);
+    color: #181e2c;
+}
+
 .section-1-2 {
     display: flex;
     justify-content: flex-end;
     position: relative;
-    margin-top: -50px;
+    margin-top: -10px;
 }
 
 .section-1-2-1 {
@@ -196,8 +208,9 @@
 }
 
 .img-section-1 {
-    width: 190px;
+    width: 150px;
     margin-left: 50px;
+    z-index: 1;
 }
 
 .section-1-2-2 {
@@ -234,83 +247,90 @@
     z-index: 2;
 }
 
-/* ------------------------------------------------------------------------------------ HOMEPAGE */
+/* ----------------------------------------------------- SECTION 2 */
 
-.homepage {
-    position: relative;
-    overflow: hidden;
+.beneficios-title {
+    font-size: calc(2vw + 9px);
+    padding: 20px 0;
+    cursor: pointer;
+    user-select: none;
 }
 
-.background-circle {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 95vw;
-    height: 95vw;
-    background-color: #1d3b6f;
-    background-image: url('./assets/images/Fondo Circulo Home.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
-    border-radius: 50%;
-    z-index: -1;
+.beneficio-section {
+    padding: 0 5px;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
 }
 
-.content-home-1 {
-    position: relative;
-    z-index: 1;
+.beneficio-section.hidden {
+    display: none;
 }
 
-.content-home-1 p {
-    padding: 2vw 0;
-    margin: 0;
-    font-size: calc(1vw + 8px);
-    color: white;
-    text-align: center;
-}
-
-.content-home-1 h1 {
-    text-align: center;
-    margin: 0;
-    margin-right: 30vw;
-    font-size: calc(2vw + 10px);
-    color: white;
-}
-
-.content-img-portada-home {
+.beneficio-item {
     display: flex;
-    justify-content: end;
-    padding-right: 5vw;
-    margin-top: -10vw;
-}
-
-.img-portada-home {
-    width: 47vw;
-    height: auto;
-}
-
-.content-home-2 h2 {
-    padding: 0 2vw;
-    margin: 0;
-    margin-top: 2vw;
-    font-size: calc(2vw + 7px);
-    color: #305386;
+    align-items: center;
     text-align: center;
+    height: 90px;
+    padding: 0 5px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.div-pag hr {
+.background-circle-beneficio {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #0065a8, #9fc750);
+    border-radius: 50%;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.img-circle-beneficio {
+    width: 50px;
+    height: auto;
+    object-fit: contain;
+}
+
+.content-parrafo-beneficio {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.beneficio-item p {
+    font-size: calc(1vw + 10px);
+    margin: 0;
+}
+
+.close-section-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 5px 100px;
+    font-size: 16px;
+    color: white;
+    background: linear-gradient(to left, #0065a8 20%, #1497ee);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hr-final-section-2 {
+    opacity: 1;
+    padding: 0 10px;
+    margin: 0 auto 0;
+    margin-top: -10px;
     border: none;
     height: 5px;
-    background-color: #192543;
-    margin: 10px 0;
-}
-
-.parrafo2 {
-    font-size: 12px;
-    text-align: justify;
-    padding: 20px 20px;
+    width: 100%;
+    background: linear-gradient(to left, #9fc750, #0065a8 60%, #1497ee);
+    border-radius: 5px;
 }
 
 /* ------------------------------------------------------------------------------------ FORM */
@@ -373,67 +393,7 @@
     box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/* ------------------------------------------------------------------------------------ BENEFICIOS */
-
-.beneficios-title {
-    font-size: calc(2vw + 10px);
-    padding: 10px 0;
-    cursor: pointer;
-    user-select: none;
-}
-
-.beneficio-section {
-    padding: 0 10px;
-    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
-}
-
-.beneficio-section.hidden {
-    display: none;
-}
-
-.beneficio-item {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    height: 90px;
-    padding: 0 10px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.background-circle-beneficio {
-    width: 80px;
-    height: 80px;
-    background-color: #1d3b6f;
-    background-size: 50px;
-    background-position: center;
-    background-repeat: no-repeat;
-    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
-    border-radius: 50%;
-}
-
-.content-parrafo-beneficio {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 5px;
-}
-
-.beneficio-item p {
-    font-size: calc(1vw + 10px);
-    margin: 0;
-}
-
 /* ------------------------------------------------------------------------------------ QUE NECESITO */
-
-.content-necesito {
-    padding: 0 10px;
-    text-align: center;
-}
 
 .necesito-title {
     font-size: calc(2vw + 10px);
@@ -487,118 +447,6 @@
 .necesito-item p {
     font-size: calc(1vw + 10px);
     margin: 0;
-}
-
-.close-section-btn {
-    display: block;
-    margin: 20px auto;
-    padding: 5px 100px;
-    font-size: 16px;
-    color: white;
-    background-color: #192543;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.close-section-btn:hover {
-    background-color: #4a5b85;
-    color: #181e2c;
-}
-
-/* ------------------------------------------------------------------------------------ REQUISITOS */
-
-.content-requisitos {
-    padding: 0 10px;
-}
-
-.content-requisito-1 h1 {
-    font-size: 5vw;
-    text-align: center;
-    padding-top: 6vw;
-    padding-bottom: 3vw;
-}
-
-.content-requisito-1 h2 {
-    font-size: 4vw;
-    text-align: center;
-}
-
-.content-requisito-1 p {
-    font-size: calc(1vw + 9px);
-    text-align: justify;
-    padding: 0 8vw;
-}
-
-.content-requisito-2 h3 {
-    font-size: 4vw;
-    text-align: justify;
-    padding: 2vw 6vw;
-}
-
-.content-requisito-2 li {
-    padding-bottom: 5vw;
-    font-size: calc(1vw + 9px);
-}
-
-/* ------------------------------------------------------------------------------------ REQUISITOS */
-
-.content-ofrecemos-1 h1 {
-    font-size: 5vw;
-    text-align: center;
-    padding-top: 6vw;
-    padding-bottom: 3vw;
-}
-
-.content-ofrecemos-1 h2 {
-    font-size: 4vw;
-    text-align: center;
-}
-
-.content-ofrecemos-1 p,
-.content-ofrecemos-3 p {
-    font-size: calc(1vw + 9px);
-    text-align: justify;
-    padding: 0 8vw;
-}
-
-.content-ofrecemos-2 h3,
-.content-ofrecemos-3 h3 {
-    font-size: 4vw;
-    text-align: justify;
-    padding: 2vw 6vw;
-}
-
-.content-ofrecemos-2 li {
-    padding-bottom: 5vw;
-    font-size: calc(1vw + 9px);
-}
-
-/* ------------------------------------------------------------------------------------ ERES AGENTE */
-
-.content-agente-1 h1 {
-    font-size: 5vw;
-    text-align: center;
-    padding-top: 6vw;
-    padding-bottom: 3vw;
-}
-
-.content-agente-1 h2 {
-    font-size: 4vw;
-    text-align: justify;
-    padding: 0 3vw;
-}
-
-.content-agente-2 h3 {
-    font-size: 4vw;
-    text-align: center;
-    padding: 2vw 5vw;
-}
-
-.content-agente-2 li {
-    padding-bottom: 5vw;
-    font-size: calc(1vw + 9px);
 }
 
 /* ------------------------------------------------------------------------------------ FOOTER */
@@ -712,32 +560,22 @@
         height: 5px;
     }
 
-    /* ------------------------------------------------------------------------------------ HOMEPAGE */
+    /* ----------------------------------------------------- SECTION 2 */
 
-    .background-circle {
-        width: 90vw;
-        height: 90vw;
-    }
-
-    .content-home-1 h1 {
-        margin-top: 2vw;
-        font-size: calc(2vw + 14px);
-    }
-
-    .content-img-portada-home {
-        margin-top: -15vw;
-    }
-
-    .img-portada-home {
-        width: 40vw;
-    }
-
-    .content-home-2 {
+    .section-2-container {
         padding: 0 20px;
     }
 
-    .content-home-2 h2 {
-        font-size: calc(2vw + 2px);
+    .beneficios-title {
+        font-size: calc(2vw + 15px);
+    }
+
+    .content-parrafo-beneficio {
+        padding: 0 30px;
+    }
+
+    .close-section-btn {
+        padding: 5px 200px;
     }
 
     /* ------------------------------------------------------------------------------------ FORM */
@@ -754,21 +592,7 @@
         flex: 1 1 calc(50% - 1rem);
     }
 
-    /* ------------------------------------------------------------------------------------ BENEFICIOS */
-
-    .beneficios-title {
-        font-size: calc(2vw + 15px);
-    }
-
-    .content-parrafo-beneficio {
-        padding: 0 50px;
-    }
-
     /* ------------------------------------------------------------------------------------ QUE NECESITO */
-
-    .content-necesito {
-        padding: 0 30px;
-    }
 
     .necesito-title {
         font-size: calc(2vw + 15px);
@@ -780,10 +604,6 @@
 
     .necesito-item {
         height: 220px;
-    }
-
-    .close-section-btn {
-        padding: 5px 200px;
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */
@@ -831,6 +651,10 @@
         padding: 0 8vw;
     }
 
+    .parrafo2 {
+        font-size: 14px;
+    }
+
     /* ----------------------------------------------------- SECTION 1 */
 
     .section-1-1 {
@@ -850,45 +674,11 @@
         padding: 1vw 6vw;
     }
 
-    /* ------------------------------------------------------------------------------------ HOMEPAGE */
+    /* ----------------------------------------------------- SECTION 2 */
 
-    .background-circle {
-        width: 85vw;
-        height: 80vw;
+    .section-2-container {
+        padding: 0 30px;
     }
-
-    .content-home-1 h1 {
-        font-size: calc(2vw + 16px);
-    }
-
-    .content-img-portada-home {
-        padding-right: 10vw;
-        margin-top: -15vw;
-    }
-
-    .img-portada-home {
-        width: 36vw;
-    }
-
-    .content-home-2 {
-        padding: 0 40px;
-    }
-
-    .content-home-2 h2 {
-        font-size: calc(2vw + 2px);
-    }
-
-    .div-pag hr {
-        height: 5px;
-        margin: 20px 50px;
-        border-radius: 5px;
-    }
-
-    .parrafo2 {
-        font-size: 14px;
-    }
-
-    /* ------------------------------------------------------------------------------------ BENEFICIOS */
 
     .beneficios-title {
         font-size: calc(2vw + 13px);
@@ -906,22 +696,26 @@
     }
 
     .beneficio-item {
-        height: 110px;
+        height: 90px;
     }
 
     .content-parrafo-beneficio {
-        padding: 0 10px;
+        padding: 0 5px;
     }
 
     .beneficio-item p {
         font-size: calc(1vw + 7px);
     }
 
-    /* ------------------------------------------------------------------------------------ QUE NECESITO */
-
-    .content-necesito {
-        padding: 0 60px;
+    .close-section-btn {
+        display: none;
     }
+
+    .hr-final-section-2 {
+        margin-top: 10px;
+    }
+
+    /* ------------------------------------------------------------------------------------ QUE NECESITO */
 
     .necesito-section.hidden {
         display: grid;
@@ -944,10 +738,6 @@
 
     .necesito-item p {
         font-size: calc(1vw + 8px);
-    }
-
-    .close-section-btn {
-        display: none;
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */
@@ -1029,36 +819,7 @@
         width: 95%;
     }
 
-    /* ------------------------------------------------------------------------------------ HOMEPAGE */
-
-    .background-circle {
-        width: 80vw;
-        height: 75vw;
-    }
-
-    .content-home-1 h1 {
-        margin-right: 25vw;
-        font-size: calc(2vw + 14px);
-    }
-
-    .content-img-portada-home {
-        padding-right: 13vw;
-        margin-top: -12vw;
-    }
-
-    .img-portada-home {
-        width: 32vw;
-    }
-
-    .content-home-2 {
-        padding: 0 80px;
-    }
-
-    .content-home-2 h2 {
-        font-size: calc(2vw + 1px);
-    }
-
-    /* ------------------------------------------------------------------------------------ BENEFICIOS */
+    /* ----------------------------------------------------- SECTION 2 */
 
     .beneficios-title {
         font-size: calc(2vw + 15px);
@@ -1071,7 +832,7 @@
     }
 
     .beneficio-item {
-        height: 120px;
+        height: 90px;
         padding: 0 10px;
     }
 
@@ -1079,11 +840,11 @@
         font-size: calc(1vw + 7px);
     }
 
-    /* ------------------------------------------------------------------------------------ QUE NECESITO */
-
-    .content-necesito {
-        padding: 0 80px;
+    .hr-final-section-2 {
+        width: 95%;
     }
+
+    /* ------------------------------------------------------------------------------------ QUE NECESITO */
 
     .necesito-section {
         gap: 20px;
@@ -1137,6 +898,10 @@
         padding: 0 13vw;
     }
 
+    .parrafo2 {
+        font-size: 16px;
+    }
+
     /* ----------------------------------------------------- SECTION 1 */
 
     .section-1-1 {
@@ -1176,46 +941,15 @@
         height: 7px;
     }
 
-    /* ------------------------------------------------------------------------------------ HOMEPAGE */
+    /* ----------------------------------------------------- SECTION 2 */
 
-    .background-circle {
-        width: 75vw;
-        height: 68vw;
+    .section-2-container {
+        padding: 0 50px;
     }
-
-    .content-home-1 h1 {
-        margin-right: 21vw;
-        margin-top: 4vw;
-        font-size: calc(2vw + 20px);
-    }
-
-    .content-img-portada-home {
-        padding-right: 15vw;
-        margin-top: -17vw;
-    }
-
-    .img-portada-home {
-        width: 29vw;
-    }
-
-    .content-home-2 {
-        padding: 0 100px;
-    }
-
-    .content-home-2 h2 {
-        font-size: calc(2vw + 1px);
-        margin-top: 0;
-    }
-
-    .parrafo2 {
-        font-size: 16px;
-    }
-
-    /* ------------------------------------------------------------------------------------ BENEFICIOS */
 
     .beneficio-section {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 0 10px;
     }
 
@@ -1224,19 +958,24 @@
         padding: 0 5px;
     }
 
+    .background-circle-beneficio {
+        width: 90px;
+        height: 90px;
+    }
+
     .content-parrafo-beneficio {
-        padding: 0 1px;
+        padding: 0 10px;
     }
 
     .beneficio-item p {
-        font-size: calc(1vw + 0px);
+        font-size: calc(1vw + 2px);
+    }
+
+    .hr-final-section-2 {
+        height: 7px;
     }
 
     /* ------------------------------------------------------------------------------------ QUE NECESITO */
-
-    .content-necesito {
-        padding: 0 110px;
-    }
 
     .necesito-section {
         gap: 10px 30px;
@@ -1289,6 +1028,10 @@
         padding: 0 16vw;
     }
 
+    .parrafo2 {
+        font-size: 17px;
+    }
+
     /* ----------------------------------------------------- SECTION 1 */
 
     .section-1-1 {
@@ -1328,64 +1071,39 @@
         margin-right: -80px;
     }
 
-    /* ------------------------------------------------------------------------------------ HOMEPAGE */
+    /* ----------------------------------------------------- SECTION 2 */
 
-    .background-circle {
-        width: 70vw;
-        height: 65vw;
+    .section-2-container {
+        padding: 0 70px;
     }
-
-    .content-home-1 h1 {
-        margin-right: 19vw;
-        margin-top: 2vw;
-    }
-
-    .content-img-portada-home {
-        padding-right: 14vw;
-        margin-top: -13vw;
-    }
-
-    .img-portada-home {
-        width: 28vw;
-    }
-
-    .content-home-2 {
-        padding: 0 140px;
-    }
-
-    .content-home-2 h2 {
-        font-size: calc(2vw + 0px);
-        margin-top: 10px;
-    }
-
-    .parrafo2 {
-        font-size: 17px;
-    }
-
-    /* ------------------------------------------------------------------------------------ BENEFICIOS */
 
     .beneficio-section {
         gap: 0 20px;
     }
 
     .beneficio-item {
-        height: 120px;
+        height: 110px;
         padding: 0 5px;
     }
 
+    .background-circle-beneficio {
+        width: 100px;
+        height: 100px;
+    }
+
+    .img-circle-beneficio {
+        width: 70px;
+    }
+
     .content-parrafo-beneficio {
-        padding: 0 1px;
+        padding: 0 5px;
     }
 
     .beneficio-item p {
-        font-size: calc(1vw + 0px);
+        font-size: calc(1vw + 2px);
     }
 
     /* ------------------------------------------------------------------------------------ QUE NECESITO */
-
-    .content-necesito {
-        padding: 0 150px;
-    }
 
     .necesito-section {
         gap: 10px 30px;
@@ -1475,50 +1193,39 @@
         margin-right: -130px;
     }
 
-    /* ------------------------------------------------------------------------------------ HOMEPAGE */
+    /* ----------------------------------------------------- SECTION 2 */
 
-    .content-home-1 h1 {
-        font-size: calc(2vw + 25px);
-        margin-top: 3vw;
+    .section-2-container {
+        padding: 0 110px;
     }
-
-    .content-img-portada-home {
-        padding-right: 16vw;
-    }
-
-    .content-home-2 {
-        padding: 0 210px;
-        padding-top: 45px;
-    }
-
-    .content-home-2 h2 {
-        font-size: calc(1vw + 15px);
-    }
-
-    /* ------------------------------------------------------------------------------------ BENEFICIOS */
 
     .beneficio-section {
         gap: 0 10px;
     }
 
     .beneficio-item {
-        height: 120px;
+        height: 140px;
         padding: 0 5px;
     }
 
+    .background-circle-beneficio {
+        width: 130px;
+        height: 130px;
+    }
+
+    .img-circle-beneficio {
+        width: 90px;
+    }
+
     .content-parrafo-beneficio {
-        padding: 0 1px;
+        padding: 0 5px;
     }
 
     .beneficio-item p {
-        font-size: calc(1vw + -1px);
+        font-size: calc(1vw + 1px);
     }
 
     /* ------------------------------------------------------------------------------------ QUE NECESITO */
-
-    .content-necesito {
-        padding: 0 220px;
-    }
 
     .necesito-section {
         gap: 10px 10px;
