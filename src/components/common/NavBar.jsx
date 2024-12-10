@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom';
-import LogoNavbar from '../assets/images/Logo MetLife NavBar 2.webp';
-import LogoNavbar2 from '../assets/images/Logo Vitamet 1.webp';
+import LogoNavbar from '../../assets/images/Logo MetLife NavBar 2.webp';
+import LogoNavbar2 from '../../assets/images/Logo Vitamet navbar.webp';
 import { BurgerMenu } from './BurgerMenu';
-import { navLinks } from './utils/NavBarMenu';
+import { navLinks } from '../utils/NavBarMenu';
 
 export const NavBar = () => {
     return (

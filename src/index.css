@@ -3,13 +3,11 @@
 .light-text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .bold-text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .light-text-curve {
@@ -136,6 +134,104 @@
 
 .menu-nav li a.active {
     font-weight: bold;
+}
+
+/* ------------------------------------------------------------------------------------ LANDING PAGE */
+
+.landing-page-container {
+    padding: 0 10px;
+    padding-top: 20px;
+    display: grid;
+    text-align: center;
+    overflow: hidden;
+}
+
+.section-landing-1 {
+    padding: 0 5vw;
+}
+
+.section-landing-1 h1 {
+    font-size: calc(3vw + 12px);
+}
+
+.logo-metlife-main {
+    width: 50px;
+}
+
+/* ----------------------------------------------------- SECTION 1 */
+
+.section-1-container {
+    padding: 10px 0px;
+}
+
+.section-1-1 {
+    text-align: justify;
+    padding: 0 25px;
+}
+
+.section-1-parrafo {
+    font-size: calc(1vw + 10px);
+    margin: 0;
+}
+
+.boton-section-1 {
+    margin: 15px 0;
+    background: linear-gradient(to left, #0065a8 20%, #1497ee);
+    color: #e9e9e9;
+    border: none;
+    border-radius: 30px;
+    padding: 5px 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.section-1-2 {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    margin-top: -50px;
+}
+
+.section-1-2-1 {
+    position: relative;
+}
+
+.img-section-1 {
+    width: 190px;
+    margin-left: 50px;
+}
+
+.section-1-2-2 {
+    position: absolute;
+    bottom: 15px;
+    right: -20px;
+    background: linear-gradient(to left, #9fc750, #0065a8 30%, #1497ee);
+    color: #e9e9e9;
+    text-align: end;
+    padding: 2px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.section-1-2-2 h2 {
+    margin-bottom: -5px;
+    font-size: 19px;
+}
+
+.section-1-2-2 p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.hr-final-section {
+    padding: 0 10px;
+    margin: 0 auto 0;
+    margin-top: -27px;
+    border: none;
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(to left, #9fc750, #0065a8 60%, #1497ee);
+    border-radius: 5px;
+    z-index: 2;
 }
 
 /* ------------------------------------------------------------------------------------ HOMEPAGE */
@@ -508,29 +604,14 @@
 /* ------------------------------------------------------------------------------------ FOOTER */
 
 .footer {
-    background-color: #192543;
+    background-color: transparent;
     color: white;
     text-align: center;
     padding: 10px 0;
 }
 
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer-content p {
-    margin: 0;
-}
-
-.texto-footer-1 {
-    padding-bottom: 10px;
-}
-
-.texto-footer-1,
-.texto-footer-2 {
-    font-size: 12px;
+.logo-footer {
+    height: 15px;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -562,6 +643,73 @@
 
     .mobile-nav-menu li {
         padding-right: 40px;
+    }
+
+    /* ------------------------------------------------------------------------------------ LANDING PAGE */
+
+    .landing-page-container {
+        padding-top: 30px;
+    }
+
+    .section-landing-1 {
+        padding: 0 5vw;
+    }
+
+    .section-landing-1 h1 {
+        font-size: calc(2vw + 14px);
+    }
+
+    /* ----------------------------------------------------- SECTION 1 */
+
+    .section-1-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 0;
+    }
+
+    .section-1-1,
+    .section-1-2 {
+        margin: 0;
+        width: 50%;
+    }
+
+    .section-1-1 {
+        padding: 0 0;
+        margin-left: 20px;
+    }
+
+    .section-1-parrafo {
+        font-size: calc(1vw + 8px);
+    }
+
+    .boton-section-1 {
+        margin: 30px 0;
+        padding: 5px 10px;
+    }
+
+    .section-1-2 {
+        justify-content: flex-start;
+        margin-top: -30px;
+    }
+
+    .section-1-2-1 {
+        margin-top: 20px;
+    }
+
+    .img-section-1 {
+        width: 240px;
+        margin-left: 5vw;
+    }
+
+    .section-1-2-2 {
+        right: -20px;
+        bottom: 15px;
+        padding: 1vw 5vw;
+    }
+
+    .hr-final-section {
+        margin-top: -47px;
+        height: 5px;
     }
 
     /* ------------------------------------------------------------------------------------ HOMEPAGE */
@@ -640,14 +788,8 @@
 
     /* ------------------------------------------------------------------------------------ FOOTER */
 
-    .footer-content {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0 40px;
-    }
-
-    .texto-footer-1 {
-        padding-bottom: 0;
+    .logo-footer {
+        height: 18px;
     }
 }
 
@@ -681,6 +823,31 @@
 
     .burger-menu {
         display: none;
+    }
+
+    /* ------------------------------------------------------------------------------------ LANDING PAGE */
+
+    .section-landing-1 {
+        padding: 0 8vw;
+    }
+
+    /* ----------------------------------------------------- SECTION 1 */
+
+    .section-1-1 {
+        margin-left: 30px;
+    }
+
+    .boton-section-1 {
+        margin: 30px 0;
+        padding: 5px 15px;
+    }
+
+    .section-1-2 {
+        width: 40%;
+    }
+
+    .section-1-2-2 {
+        padding: 1vw 6vw;
     }
 
     /* ------------------------------------------------------------------------------------ HOMEPAGE */
@@ -785,8 +952,8 @@
 
     /* ------------------------------------------------------------------------------------ FOOTER */
 
-    .texto-footer-1 {
-        font-size: 16px;
+    .logo-footer {
+        height: 20px;
     }
 }
 
@@ -795,7 +962,7 @@
 
     .logo-navbar {
         height: 40px;
-        padding-left: 40px;
+        padding-left: 35px;
     }
 
     .logo-navbar-2 {
@@ -811,6 +978,55 @@
 
     .linea-separadora {
         margin-left: 10px;
+    }
+
+    /* ------------------------------------------------------------------------------------ LANDING PAGE */
+
+    .section-landing-1 {
+        padding: 0 11vw;
+    }
+
+    /* ----------------------------------------------------- SECTION 1 */
+
+    .section-1-1 {
+        margin-left: 30px;
+    }
+
+    .section-1-parrafo {
+        font-size: calc(1vw + 7px);
+    }
+
+    .boton-section-1 {
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+
+    .section-1-2 {
+        margin-top: -60px;
+    }
+
+    .img-section-1 {
+        width: 270px;
+        margin-left: 7vw;
+    }
+
+    .section-1-2-2 {
+        right: -20px;
+        padding: 1vw 9vw;
+    }
+
+    .section-1-2-2 h2 {
+        font-size: 22px;
+        margin-right: -40px;
+    }
+
+    .section-1-2-2 p {
+        font-size: 16px;
+        margin-right: -40px;
+    }
+
+    .hr-final-section {
+        width: 95%;
     }
 
     /* ------------------------------------------------------------------------------------ HOMEPAGE */
@@ -888,16 +1104,8 @@
 
     /* ------------------------------------------------------------------------------------ FOOTER */
 
-    .footer-content {
-        padding: 0 50px;
-    }
-
-    .texto-footer-1 {
-        font-size: 18px;
-    }
-
-    .texto-footer-2 {
-        font-size: 16px;
+    .logo-footer {
+        height: 23px;
     }
 }
 
@@ -906,7 +1114,7 @@
 
     .logo-navbar {
         height: 50px;
-        padding-left: 70px;
+        padding-left: 65px;
     }
 
     .logo-navbar-2 {
@@ -921,6 +1129,51 @@
 
     .linea-separadora {
         margin-left: 13px;
+    }
+
+    /* ------------------------------------------------------------------------------------ LANDING PAGE */
+
+    .section-landing-1 {
+        padding: 0 13vw;
+    }
+
+    /* ----------------------------------------------------- SECTION 1 */
+
+    .section-1-1 {
+        margin-left: 65px;
+    }
+
+    .section-1-parrafo {
+        font-size: calc(1vw + 6px);
+    }
+
+    .boton-section-1 {
+        padding: 15px 25px;
+        font-size: 22px;
+    }
+
+    .section-1-2 {
+        margin-top: -80px;
+    }
+
+    .img-section-1 {
+        margin-left: 9vw;
+    }
+
+    .section-1-2-2 {
+        padding: 1vw 11vw;
+    }
+
+    .section-1-2-2 h2 {
+        margin-right: -50px;
+    }
+
+    .section-1-2-2 p {
+        margin-right: -50px;
+    }
+
+    .hr-final-section {
+        height: 7px;
     }
 
     /* ------------------------------------------------------------------------------------ HOMEPAGE */
@@ -1003,16 +1256,8 @@
 
     /* ------------------------------------------------------------------------------------ FOOTER */
 
-    .footer-content {
-        padding: 0 90px;
-    }
-
-    .texto-footer-1 {
-        font-size: 20px;
-    }
-
-    .texto-footer-2 {
-        font-size: 16px;
+    .logo-footer {
+        height: 26px;
     }
 }
 
@@ -1021,7 +1266,7 @@
 
     .logo-navbar {
         height: 70px;
-        padding-left: 80px;
+        padding-left: 75px;
     }
 
     .logo-navbar-2 {
@@ -1036,6 +1281,51 @@
 
     .linea-separadora {
         margin-left: 16px;
+    }
+
+    /* ------------------------------------------------------------------------------------ LANDING PAGE */
+
+    .section-landing-1 {
+        padding: 0 16vw;
+    }
+
+    /* ----------------------------------------------------- SECTION 1 */
+
+    .section-1-1 {
+        margin-left: 80px;
+        margin-top: 40px;
+    }
+
+    .section-1-parrafo {
+        font-size: calc(1vw + 6px);
+    }
+
+    .boton-section-1 {
+        padding: 20px 30px;
+        font-size: 25px;
+    }
+
+    .section-1-2 {
+        margin-top: -80px;
+    }
+
+    .img-section-1 {
+        margin-left: 8vw;
+        width: 330px;
+    }
+
+    .section-1-2-2 {
+        padding: 1vw 13vw;
+    }
+
+    .section-1-2-2 h2 {
+        font-size: 25px;
+        margin-right: -80px;
+    }
+
+    .section-1-2-2 p {
+        font-size: 18px;
+        margin-right: -80px;
     }
 
     /* ------------------------------------------------------------------------------------ HOMEPAGE */
@@ -1115,16 +1405,8 @@
 
     /* ------------------------------------------------------------------------------------ FOOTER */
 
-    .footer-content {
-        padding: 0 100px;
-    }
-
-    .texto-footer-1 {
-        font-size: 22px;
-    }
-
-    .texto-footer-2 {
-        font-size: 18px;
+    .logo-footer {
+        height: 30px;
     }
 }
 
@@ -1148,6 +1430,49 @@
 
     .linea-separadora {
         margin-left: 19px;
+    }
+
+    /* ------------------------------------------------------------------------------------ LANDING PAGE */
+
+    .section-landing-1 {
+        padding: 10px 20vw;
+    }
+
+    /* ----------------------------------------------------- SECTION 1 */
+
+    .section-1-1 {
+        margin-left: 130px;
+        margin-top: 100px;
+    }
+
+    .section-1-parrafo {
+        font-size: calc(1vw + 7px);
+    }
+
+    .boton-section-1 {
+        padding: 20px 50px;
+    }
+
+    .section-1-2 {
+        margin-top: -20px;
+    }
+
+    .img-section-1 {
+        width: 400px;
+    }
+
+    .section-1-2-2 {
+        padding: 0.5vw 14vw;
+    }
+
+    .section-1-2-2 h2 {
+        font-size: 28px;
+        margin-right: -130px;
+    }
+
+    .section-1-2-2 p {
+        font-size: 20px;
+        margin-right: -130px;
     }
 
     /* ------------------------------------------------------------------------------------ HOMEPAGE */
@@ -1213,15 +1538,7 @@
 
     /* ------------------------------------------------------------------------------------ FOOTER */
 
-    .footer-content {
-        padding: 0 130px;
-    }
-
-    .texto-footer-1 {
-        font-size: 25px;
-    }
-
-    .texto-footer-2 {
-        font-size: 20px;
+    .logo-footer {
+        height: 35px;
     }
 }

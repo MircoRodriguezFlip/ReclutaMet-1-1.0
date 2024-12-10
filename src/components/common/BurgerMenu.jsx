@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { navLinks } from './utils/NavBarMenu';
+import { navLinks } from '../utils/NavBarMenu';
 
 export const BurgerMenu = () => {
     const [isOpen, setIsOpen] = useState(false);

@@ -1,11 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { NavBar } from './components/NavBar';
-import { HomePage } from './components/HomePage';
-import { RequisitosPage } from './components/RequisitosPage';
-import { OfrecemosPage } from './components/OfrecemosPage';
-import { ContactPage } from './components/ContactPage';
-import { EresAgentePage } from './components/EresAgentePage';
-import { Footer } from './components/footer';
+import { NavBar } from './components/common/NavBar';
+import { LadingPage } from './components/pages/LandingPage';
+import { AgentePage } from './components/pages/AgentePage';
+import { Footer } from './components/common/footer';
 
 function App() {
     return (
@@ -13,11 +10,8 @@ function App() {
             <NavBar />
 
             <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/requisitos" element={<RequisitosPage />} />
-                <Route path="/ofrecemos" element={<OfrecemosPage />} />
-                <Route path="/contacto" element={<ContactPage />} />
-                <Route path="/eres-agente" element={<EresAgentePage />} />
+                <Route path="/" element={<LadingPage />} />
+                <Route path="/eres-agente" element={<AgentePage />} />
             </Routes>
 
             <Footer />
