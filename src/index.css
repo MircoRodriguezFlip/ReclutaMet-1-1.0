@@ -161,7 +161,9 @@
 .parrafo2 {
     font-size: 12px;
     text-align: justify;
-    padding: 20px 20px;
+    padding: 0 20px;
+    padding-top: 20px;
+    margin: 0;
 }
 
 /* ----------------------------------------------------- SECTION 1 */
@@ -249,19 +251,22 @@
 
 /* ----------------------------------------------------- SECTION 2 */
 
-.beneficios-title {
+.beneficios-title,
+.necesito-title {
     font-size: calc(2vw + 9px);
     padding: 20px 0;
     cursor: pointer;
     user-select: none;
 }
 
-.beneficio-section {
+.beneficio-section,
+.necesito-section {
     padding: 0 5px;
     transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
 }
 
-.beneficio-section.hidden {
+.beneficio-section.hidden,
+.necesito-section.hidden {
     display: none;
 }
 
@@ -303,7 +308,8 @@
     padding: 0 5px;
 }
 
-.beneficio-item p {
+.beneficio-item p,
+.necesito-item p {
     font-size: calc(1vw + 10px);
     margin: 0;
 }
@@ -331,6 +337,41 @@
     width: 100%;
     background: linear-gradient(to left, #9fc750, #0065a8 60%, #1497ee);
     border-radius: 5px;
+}
+
+/* ----------------------------------------------------- SECTION 3 */
+
+.necesito-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.necesito-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 130px;
+    padding: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.necesito-item img {
+    width: 70px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.content-parrafo-necesito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 /* ------------------------------------------------------------------------------------ FORM */
@@ -391,62 +432,6 @@
     color: #ffffff;
     background-color: #192543;
     box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
-}
-
-/* ------------------------------------------------------------------------------------ QUE NECESITO */
-
-.necesito-title {
-    font-size: calc(2vw + 10px);
-    padding: 10px 0;
-    cursor: pointer;
-    user-select: none;
-}
-
-.necesito-section {
-    padding: 0 10px;
-    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
-}
-
-.necesito-section.hidden {
-    display: none;
-}
-
-.necesito-items {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-}
-
-.necesito-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    height: 180px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.necesito-item img {
-    width: 20vw;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.content-parrafo-necesito {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.necesito-item p {
-    font-size: calc(1vw + 10px);
-    margin: 0;
 }
 
 /* ------------------------------------------------------------------------------------ FOOTER */
@@ -562,11 +547,13 @@
 
     /* ----------------------------------------------------- SECTION 2 */
 
-    .section-2-container {
+    .section-2-container,
+    .section-3-container {
         padding: 0 20px;
     }
 
-    .beneficios-title {
+    .beneficios-title,
+    .necesito-title {
         font-size: calc(2vw + 15px);
     }
 
@@ -576,6 +563,16 @@
 
     .close-section-btn {
         padding: 5px 200px;
+    }
+
+    /* ----------------------------------------------------- SECTION 3 */
+
+    .necesito-item {
+        height: 140px;
+    }
+
+    .necesito-item img {
+        width: 80px;
     }
 
     /* ------------------------------------------------------------------------------------ FORM */
@@ -590,20 +587,6 @@
     .form-block-1,
     .form-block-2 {
         flex: 1 1 calc(50% - 1rem);
-    }
-
-    /* ------------------------------------------------------------------------------------ QUE NECESITO */
-
-    .necesito-title {
-        font-size: calc(2vw + 15px);
-    }
-
-    .necesito-section {
-        gap: 20px;
-    }
-
-    .necesito-item {
-        height: 220px;
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */
@@ -676,11 +659,13 @@
 
     /* ----------------------------------------------------- SECTION 2 */
 
-    .section-2-container {
+    .section-2-container,
+    .section-3-container {
         padding: 0 30px;
     }
 
-    .beneficios-title {
+    .beneficios-title,
+    .necesito-title {
         font-size: calc(2vw + 13px);
         cursor: auto;
     }
@@ -691,7 +676,8 @@
         gap: 0 10px;
     }
 
-    .beneficio-section.hidden {
+    .beneficio-section.hidden,
+    .necesito-section.hidden {
         display: grid;
     }
 
@@ -703,7 +689,8 @@
         padding: 0 5px;
     }
 
-    .beneficio-item p {
+    .beneficio-item p,
+    .necesito-item p {
         font-size: calc(1vw + 7px);
     }
 
@@ -712,32 +699,20 @@
     }
 
     .hr-final-section-2 {
-        margin-top: 10px;
+        margin-top: 20px;
     }
 
-    /* ------------------------------------------------------------------------------------ QUE NECESITO */
-
-    .necesito-section.hidden {
-        display: grid;
-    }
+    /* ----------------------------------------------------- SECTION 3 */
 
     .necesito-items {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
+        gap: 10px 20px;
     }
-
-    .necesito-title {
-        font-size: calc(2vw + 13px);
-        margin-bottom: 20px;
-        cursor: auto;
+    .necesito-item {
+        height: 150px;
     }
 
     .necesito-item img {
-        width: 15vw;
-    }
-
-    .necesito-item p {
-        font-size: calc(1vw + 8px);
+        width: 90px;
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */
@@ -821,7 +796,8 @@
 
     /* ----------------------------------------------------- SECTION 2 */
 
-    .beneficios-title {
+    .beneficios-title,
+    .necesito-title {
         font-size: calc(2vw + 15px);
         cursor: auto;
     }
@@ -836,7 +812,8 @@
         padding: 0 10px;
     }
 
-    .beneficio-item p {
+    .beneficio-item p,
+    .necesito-item p {
         font-size: calc(1vw + 7px);
     }
 
@@ -844,23 +821,22 @@
         width: 95%;
     }
 
-    /* ------------------------------------------------------------------------------------ QUE NECESITO */
+    /* ----------------------------------------------------- SECTION 3 */
 
-    .necesito-section {
-        gap: 20px;
+    .section-3-container {
+        padding: 0 40px;
     }
 
-    .necesito-title {
-        font-size: calc(2vw + 15px);
-        margin-bottom: 30px;
+    .necesito-items {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px 30px;
+    }
+    .necesito-item {
+        height: 180px;
     }
 
     .necesito-item img {
-        width: 12vw;
-    }
-
-    .necesito-item p {
-        font-size: calc(1vw + 7px);
+        width: 100px;
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */
@@ -975,18 +951,18 @@
         height: 7px;
     }
 
-    /* ------------------------------------------------------------------------------------ QUE NECESITO */
+    /* ----------------------------------------------------- SECTION 3 */
 
-    .necesito-section {
-        gap: 10px 30px;
+    .section-3-container {
+        padding: 0 90px;
+    }
+
+    .necesito-items {
+        gap: 20px 40px;
     }
 
     .necesito-item {
-        height: 200px;
-    }
-
-    .necesito-item img {
-        width: 9vw;
+        height: 165px;
     }
 
     .necesito-item p {
@@ -1103,22 +1079,18 @@
         font-size: calc(1vw + 2px);
     }
 
-    /* ------------------------------------------------------------------------------------ QUE NECESITO */
+    /* ----------------------------------------------------- SECTION 3 */
 
-    .necesito-section {
-        gap: 10px 30px;
+    .section-3-container {
+        padding: 0 150px;
     }
 
     .necesito-item {
-        height: 220px;
-    }
-
-    .necesito-item img {
-        width: 8vw;
+        height: 175px;
     }
 
     .necesito-item p {
-        font-size: calc(1vw + 4px);
+        font-size: calc(1vw + 6px);
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */
@@ -1225,22 +1197,18 @@
         font-size: calc(1vw + 1px);
     }
 
-    /* ------------------------------------------------------------------------------------ QUE NECESITO */
+    /* ----------------------------------------------------- SECTION 3 */
 
-    .necesito-section {
-        gap: 10px 10px;
+    .section-3-container {
+        padding: 0 200px;
     }
 
     .necesito-item {
-        height: 100%;
-    }
-
-    .necesito-item img {
-        width: 7vw;
+        height: 190px;
     }
 
     .necesito-item p {
-        font-size: calc(1vw + 3px);
+        font-size: calc(1vw + 7px);
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */

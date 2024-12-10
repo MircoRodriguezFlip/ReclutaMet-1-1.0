@@ -31,7 +31,7 @@ export const Section2 = () => {
                     ].map((beneficio, index) => (
                         <div className="beneficio-item" key={index}>
                             <div className="background-circle-beneficio">
-                                <img src={beneficio.img} alt={`Beneficio ${index + 1}`} className="img-circle-beneficio" />
+                                <img src={beneficio.img} alt={`Beneficio ${index + 1}`} className="img-circle-beneficio" loading="lazy" />
                             </div>
                             <div className="content-parrafo-beneficio">
                                 <p className="light-text">{beneficio.text}</p>
