@@ -81,6 +81,10 @@ export const useForm = (initialState, submitCallback) => {
 
         // Validar campos de cédula y fecha de vencimiento si el checkbox está marcado
         if (showExtraFields) {
+            if (!formData.tipoCedula) {
+                newErrors.tipoCedula = 'El tipo de cédula es obligatorio.';
+            }
+
             if (!formData.cedula.trim()) {
                 newErrors.cedula = 'La cédula es obligatoria.';
             }
@@ -122,6 +126,10 @@ export const useForm = (initialState, submitCallback) => {
             }
 
             // Agregar cédula y fecha de vencimiento solo si están rellenos
+            if (formData.tipoCedula) {
+                formDataToSend.append('tipoCedula', formData.tipoCedula);
+            }
+
             if (formData.cedula.trim()) {
                 formDataToSend.append('cedula', formData.cedula.trim());
             }

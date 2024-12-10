@@ -2,6 +2,7 @@ import MetLifeIcon from '../../../public/images/FavIcon.webp';
 import { Section1 } from '../imports/Section1';
 import { Section2 } from '../imports/section2';
 import { Section3 } from '../imports/Section3';
+import { Section4 } from '../imports/Section4';
 
 export const LadingPage = () => {
     return (
@@ -21,6 +22,10 @@ export const LadingPage = () => {
 
             <section>
                 <Section3 />
+            </section>
+
+            <section>
+                <Section4 />
             </section>
 
             <section>

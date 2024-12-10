@@ -378,19 +378,10 @@
 
 .content-form {
     width: 100%;
-    padding: 20px;
-}
-
-.content-form .form-block-1,
-.content-form .form-block-2 {
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
-}
-
-.content-form .form-block-1 > div,
-.content-form .form-block-2 > div {
-    flex: 1 1 calc(50% - 1.5rem);
-    margin-top: 5px;
+    text-align: start;
 }
 
 .content-form label {
@@ -401,13 +392,23 @@
 .content-form input,
 .content-form select,
 .content-form option {
-    color: #ffffff;
-    background-color: #1d3b6f;
+    color: #192543;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content-form .form-check-input {
+    background-color: #192543;
 }
 
 .content-form input,
 .content-form select {
-    border-radius: 1.5rem;
+    border-radius: 1rem;
+}
+
+.form-check-input {
+    margin-left: 10px;
+    margin-top: 7px;
 }
 
 .text-danger {
@@ -417,6 +418,7 @@
 
 .content-envio {
     display: flex;
+    justify-content: end;
     align-items: center;
     padding-top: 20px;
 }
@@ -427,7 +429,7 @@
     cursor: pointer;
     border: none;
     padding: 0.375rem 0.8rem;
-    margin-right: 10px; /* distancia del spinner */
+    margin-left: 10px; /* distancia del spinner */
     border-radius: 1rem;
     color: #ffffff;
     background-color: #192543;
@@ -573,20 +575,6 @@
 
     .necesito-item img {
         width: 80px;
-    }
-
-    /* ------------------------------------------------------------------------------------ FORM */
-
-    .content-form .form-block-1,
-    .content-form .form-block-2 {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 16px;
-    }
-
-    .form-block-1,
-    .form-block-2 {
-        flex: 1 1 calc(50% - 1rem);
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */
