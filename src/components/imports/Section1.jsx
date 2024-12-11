@@ -1,7 +1,19 @@
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import ImgSection1 from '../../assets/images/Imagen section 1.webp';
 
 export const Section1 = () => {
+    const navigate = useNavigate();
+
+    const handleContactClick = (e) => {
+        e.preventDefault();
+        const targetElement = document.querySelector('#contacto');
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            navigate('/#contacto'); // En caso de que no esté en la página principal
+        }
+    };
+
     return (
         <section>
             <div className="section-1-container">
@@ -11,9 +23,9 @@ export const Section1 = () => {
                         profesionales que te guiarán en cada paso hacia el éxito.
                     </p>
 
-                    <NavLink to="/eres-agente">
+                    <a href="#contacto" onClick={handleContactClick}>
                         <button className="boton-section-1 bold-text">Contáctanos</button>
-                    </NavLink>
+                    </a>
                 </div>
 
                 <div className="section-1-2">

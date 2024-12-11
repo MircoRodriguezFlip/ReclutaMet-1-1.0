@@ -7,7 +7,7 @@ import { Footer } from './components/common/footer';
 function App() {
     return (
         <BrowserRouter basename="/ReclutaMet-1-1.0">
-            <NavBar />
+            <NavBar id="inicio" />
 
             <Routes>
                 <Route path="/" element={<LadingPage />} />

@@ -16,15 +16,15 @@ export const LadingPage = () => {
                 <Section1 />
             </section>
 
-            <section>
+            <section id="ofrecemos">
                 <Section2 />
             </section>
 
-            <section>
+            <section id="requisitos">
                 <Section3 />
             </section>
 
-            <section>
+            <section id="contacto">
                 <Section4 />
             </section>
 
