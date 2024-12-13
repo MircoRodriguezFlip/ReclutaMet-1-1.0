@@ -8,27 +8,21 @@ export const NavBar = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    const handleScroll = (e, to) => {
+    const handleLinkClick = (e, item) => {
         e.preventDefault();
-        const targetElement = document.querySelector(to);
-        if (targetElement) {
-            // Realizar el desplazamiento suave
-            window.scrollTo({
-                top: targetElement.offsetTop - 80, // Ajusta el valor para que el navbar no tape la parte superior
-                behavior: 'smooth',
-            });
-        }
-    };
 
-    const handleInicioClick = (e) => {
-        e.preventDefault();
         if (location.pathname === '/') {
-            // Ya estás en la página principal, scroll al top
-            const topElement = document.querySelector('#inicio') || document.body;
-            topElement.scrollIntoView({ behavior: 'smooth' });
+            // Si ya estás en la landing page
+            const targetElement = document.querySelector(item.to);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80, // Ajuste para compensar el navbar
+                    behavior: 'smooth',
+                });
+            }
         } else {
-            // Navegar a la página principal
-            navigate('/#inicio');
+            // Si estás en otra página, navega a la landing page con el hash
+            navigate(`/${item.to}`);
         }
     };
 
@@ -47,12 +41,8 @@ export const NavBar = () => {
                 <ul className="menu-nav light-text">
                     {navLinks.map((item) => (
                         <li key={item.id}>
-                            {item.id === 'inicio' ? (
-                                <a href="/" onClick={handleInicioClick} title={item.title}>
-                                    {item.label}
-                                </a>
-                            ) : item.to.startsWith('#') && location.pathname === '/' ? (
-                                <a href={item.to} onClick={(e) => handleScroll(e, item.to)} title={item.title}>
+                            {item.to.startsWith('#') ? (
+                                <a href={item.to} onClick={(e) => handleLinkClick(e, item)} title={item.title}>
                                     {item.label}
                                 </a>
                             ) : (

@@ -17,7 +17,7 @@ export const Section2 = () => {
         <section>
             <div className="section-2-container">
                 <h2 className="beneficios-title bold-text" onClick={toggleVisibility}>
-                    Beneficios de ser agente VitaMet
+                    Beneficios de ser agente MetLife
                 </h2>
 
                 <div className={`beneficio-section ${isVisible ? 'visible' : 'hidden'}`}>

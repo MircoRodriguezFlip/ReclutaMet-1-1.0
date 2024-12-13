@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
-    background-color: #f1f1f1;
+    background: linear-gradient(to bottom right, #d4d4d4 10%, #f1f1f1);
 }
 
 .light-text {
@@ -33,7 +33,7 @@ body {
 .navbar {
     position: fixed;
     display: flex;
-    background-color: #e9e9e9;
+    background: linear-gradient(to bottom right, #d4d4d4 10%, #f1f1f1);
     color: rgb(0, 0, 0);
     box-shadow: -4px 0 10px rgba(0, 0, 0, 1);
     width: 100%;
@@ -85,7 +85,7 @@ body {
     right: 0;
     width: 56%;
     height: 100%;
-    background-color: #e9e9e9;
+    background: linear-gradient(to bottom right, #d4d4d4 10%, #f1f1f1);
     padding-top: 80px;
     box-shadow: -4px 0 10px rgba(0, 0, 0, 0.3);
     transform: translateX(100%);
@@ -162,9 +162,13 @@ body {
 .parrafo2 {
     font-size: 12px;
     text-align: justify;
-    padding: 0 20px;
+    padding: 0 30px;
     padding-top: 20px;
     margin: 0;
+}
+
+.parrafo2 a {
+    text-decoration: none;
 }
 
 /* ----------------------------------------------------- SECTION 1 */
@@ -174,11 +178,11 @@ body {
 }
 
 .section-1-1 {
-    text-align: justify;
     padding: 0 25px;
 }
 
 .section-1-parrafo {
+    text-align: justify;
     font-size: calc(1vw + 10px);
     margin: 0;
 }
@@ -195,7 +199,8 @@ body {
 
 .close-section-btn:hover,
 .boton-section-1:hover,
-.boton-form:hover {
+.boton-form:hover,
+.boton-section-A2:hover {
     background: linear-gradient(to left, #1497ee 20%, #0065a8);
     color: #181e2c;
 }
@@ -290,7 +295,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom right, #0065a8, #9fc750);
+    background: linear-gradient(to bottom right, #0065a8 60%, #9fc750);
     border-radius: 50%;
     box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
 }
@@ -508,6 +513,83 @@ body {
     font-size: 12px;
 }
 
+/* ------------------------------------------------------------------------------------ AGENTE PAGE */
+
+/* ----------------------------------------------------- SECTION A1 */
+
+.section-A1-container {
+    padding: 10px 0px;
+}
+
+.textos-section-A1 h1 {
+    font-size: calc(2vw + 16px);
+    margin-top: -10px;
+    padding-bottom: 10px;
+}
+
+.textos-section-A1 p {
+    text-align: justify;
+    font-size: calc(1vw + 11px);
+    padding: 0 20px;
+    padding-top: 10px;
+}
+
+.textos-section-A1 h2 {
+    font-size: calc(2vw + 14px);
+    padding: 10px 0;
+    padding-bottom: 20px;
+}
+
+.img-section-A1 {
+    width: 150px;
+    margin-left: 50px;
+}
+
+.hr-final-section-A1 {
+    padding: 0 10px;
+    margin: 0 auto 0;
+    margin-top: -27px;
+    border: none;
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(to left, #9fc750, #0065a8 60%, #1497ee);
+    border-radius: 5px;
+    z-index: 2;
+}
+
+/* ----------------------------------------------------- SECTION A2 */
+
+.section-A2-container {
+    padding: 20px 10px;
+}
+
+.section-A2-container h2 {
+    font-size: calc(2vw + 10px);
+}
+
+.section-A2-container p {
+    padding: 10px 30px;
+    font-size: calc(1vw + 11px);
+    text-align: justify;
+}
+
+.section-A2-2 {
+    height: 200px;
+}
+
+.boton-section-A2 {
+    text-decoration: none;
+    margin-bottom: 20px;
+    padding: 5px 50px;
+    font-size: 16px;
+    color: white;
+    background: linear-gradient(to left, #0065a8 20%, #1497ee);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
 /* ------------------------------------------------------------------------------------ FOOTER */
 
 .footer {
@@ -708,6 +790,69 @@ body {
         right: 30px;
     }
 
+    /* ------------------------------------------------------------------------------------ AGENTE PAGE */
+
+    /* ----------------------------------------------------- SECTION A1 */
+
+    .section-A1-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 0;
+    }
+
+    .textos-section-A1 h1 {
+        font-size: calc(2vw + 10px);
+        margin-top: -20px;
+        padding: 0 10px;
+        padding-bottom: 10px;
+    }
+
+    .textos-section-A1 p {
+        text-align: justify;
+        font-size: calc(1vw + 9px);
+        padding-top: 10px;
+    }
+
+    .textos-section-A1 h2 {
+        font-size: calc(2vw + 9px);
+        padding: 10px 0;
+    }
+
+    .img-section-A1 {
+        width: 240px;
+        margin-left: 5vw;
+    }
+
+    .hr-final-section-A1 {
+        margin-top: -47px;
+        height: 5px;
+    }
+
+    /* ----------------------------------------------------- SECTION A2 */
+
+    .section-A2-container {
+        padding: 30px 20px;
+    }
+
+    .section-A2-container h2 {
+        font-size: calc(2vw + 12px);
+    }
+
+    .section-A2-container p {
+        padding: 10px 40px;
+        font-size: calc(1vw + 9px);
+    }
+
+    .section-A2-2 {
+        height: 300px;
+    }
+
+    .boton-section-A2 {
+        padding: 5px 50px;
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
     /* ------------------------------------------------------------------------------------ FOOTER */
 
     .logo-footer {
@@ -755,6 +900,8 @@ body {
 
     .parrafo2 {
         font-size: 14px;
+        padding: 0 50px;
+        padding-top: 20px;
     }
 
     /* ----------------------------------------------------- SECTION 1 */
@@ -922,6 +1069,52 @@ body {
 
     .campos-obligatorios {
         right: 40px;
+    }
+
+    /* ------------------------------------------------------------------------------------ AGENTE PAGE */
+
+    /* ----------------------------------------------------- SECTION A1 */
+
+    .textos-section-A1 h1 {
+        font-size: calc(2vw + 11px);
+        padding: 0 10px;
+        padding-bottom: 10px;
+    }
+
+    .textos-section-A1 p {
+        text-align: justify;
+        font-size: calc(1vw + 7px);
+        padding-top: 10px;
+    }
+
+    .textos-section-A1 h2 {
+        font-size: calc(2vw + 8px);
+        padding: 5px 0;
+    }
+
+    /* ----------------------------------------------------- SECTION A2 */
+
+    .section-A2-container {
+        padding: 30px 40px;
+    }
+
+    .section-A2-container h2 {
+        font-size: calc(2vw + 16px);
+    }
+
+    .section-A2-container p {
+        padding: 10px 60px;
+        font-size: calc(1vw + 8px);
+    }
+
+    .section-A2-2 {
+        height: 400px;
+    }
+
+    .boton-section-A2 {
+        padding: 7px 70px;
+        font-size: 18px;
+        margin-bottom: 10px;
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */
@@ -1112,6 +1305,45 @@ body {
         right: 60px;
     }
 
+    /* ------------------------------------------------------------------------------------ AGENTE PAGE */
+
+    /* ----------------------------------------------------- SECTION A1 */
+
+    .section-A1-container {
+        padding: 30px 0;
+        margin-top: 30px;
+    }
+
+    .img-section-A1 {
+        width: 300px;
+        margin-left: 7vw;
+    }
+
+    /* ----------------------------------------------------- SECTION A2 */
+
+    .section-A2-container {
+        padding: 30px 60px;
+    }
+
+    .section-A2-container h2 {
+        font-size: calc(2vw + 18px);
+    }
+
+    .section-A2-container p {
+        font-size: calc(1vw + 8px);
+    }
+
+    .section-A2-2 {
+        height: 420px;
+        padding: 0 70px;
+    }
+
+    .boton-section-A2 {
+        padding: 7px 70px;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
     /* ------------------------------------------------------------------------------------ FOOTER */
 
     .logo-footer {
@@ -1147,8 +1379,14 @@ body {
         padding: 0 13vw;
     }
 
+    .section-landing-1 h1 {
+        margin-top: 20px;
+    }
+
     .parrafo2 {
         font-size: 16px;
+        padding: 0 60px;
+        padding-top: 20px;
     }
 
     /* ----------------------------------------------------- SECTION 1 */
@@ -1306,6 +1544,61 @@ body {
 
     .campos-obligatorios {
         right: 80px;
+    }
+
+    /* ------------------------------------------------------------------------------------ AGENTE PAGE */
+
+    /* ----------------------------------------------------- SECTION A1 */
+
+    .textos-section-A1 h1 {
+        font-size: calc(2vw + 14px);
+        margin-top: -50px;
+    }
+
+    .textos-section-A1 p {
+        font-size: calc(1vw + 6px);
+    }
+
+    .textos-section-A1 h2 {
+        font-size: calc(2vw + 7px);
+        padding: 0px 0;
+        padding-top: 20px;
+    }
+
+    .section-A1-container {
+        padding: 30px 0;
+        margin-top: 80px;
+    }
+
+    .img-section-A1 {
+        width: 320px;
+        margin-left: 9vw;
+    }
+
+    /* ----------------------------------------------------- SECTION A2 */
+
+    .section-A2-container {
+        padding: 30px 60px;
+    }
+
+    .section-A2-container h2 {
+        font-size: calc(2vw + 20px);
+    }
+
+    .section-A2-container p {
+        padding: 20px 60px;
+        font-size: calc(1vw + 8px);
+    }
+
+    .section-A2-2 {
+        height: 420px;
+        padding: 0 15vw;
+    }
+
+    .boton-section-A2 {
+        padding: 7px 70px;
+        font-size: 18px;
+        margin-bottom: 10px;
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */
@@ -1494,6 +1787,46 @@ body {
         right: 100px;
     }
 
+    /* ------------------------------------------------------------------------------------ AGENTE PAGE */
+
+    /* ----------------------------------------------------- SECTION A1 */
+
+    .section-A1-container {
+        padding: 30px 0;
+        margin-top: 40px;
+    }
+
+    .textos-section-A1 h1 {
+        margin-top: -80px;
+    }
+
+    .textos-section-A1 p {
+        font-size: calc(1vw + 7px);
+    }
+
+    /* ----------------------------------------------------- SECTION A2 */
+
+    .section-A2-container h2 {
+        font-size: calc(2vw + 20px);
+        padding: 0 80px;
+    }
+
+    .section-A2-container p {
+        padding: 30px 60px;
+        font-size: calc(1vw + 9px);
+    }
+
+    .section-A2-2 {
+        height: 400px;
+        padding: 0 20vw;
+    }
+
+    .boton-section-A2 {
+        padding: 9px 90px;
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
     /* ------------------------------------------------------------------------------------ FOOTER */
 
     .logo-footer {
@@ -1658,6 +1991,46 @@ body {
 
     .campos-obligatorios {
         right: 220px;
+    }
+
+    /* ------------------------------------------------------------------------------------ AGENTE PAGE */
+
+    /* ----------------------------------------------------- SECTION A1 */
+
+    .section-A1-container {
+        margin-top: 20px;
+    }
+
+    .textos-section-A1 h1 {
+        margin-top: -100px;
+    }
+
+    .textos-section-A1 p {
+        font-size: calc(1vw + 6px);
+        padding: 15px 50px;
+    }
+
+    /* ----------------------------------------------------- SECTION A2 */
+
+    .section-A2-container h2 {
+        padding: 0 200px;
+    }
+
+    .section-A2-container p {
+        text-align: center;
+        padding: 30px 10px;
+        font-size: calc(1vw + 9px);
+    }
+
+    .section-A2-2 {
+        height: 500px;
+        padding: 0 20vw;
+    }
+
+    .boton-section-A2 {
+        padding: 9px 90px;
+        font-size: 20px;
+        margin-bottom: 5px;
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */

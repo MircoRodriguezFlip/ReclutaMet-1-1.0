@@ -1,16 +1,15 @@
-import { useNavigate } from 'react-router-dom';
 import ImgSection1 from '../../assets/images/Imagen section 1.webp';
 
 export const Section1 = () => {
-    const navigate = useNavigate();
-
     const handleContactClick = (e) => {
         e.preventDefault();
         const targetElement = document.querySelector('#contacto');
         if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth' });
-        } else {
-            navigate('/#contacto'); // En caso de que no esté en la página principal
+            // Realizar el desplazamiento suave
+            window.scrollTo({
+                top: targetElement.offsetTop - 80, // Ajusta el valor para que el navbar no tape la parte superior
+                behavior: 'smooth',
+            });
         }
     };
 

@@ -23,15 +23,21 @@ export const BurgerMenu = () => {
         }
     };
 
-    const handleScrollLink = (e, to) => {
+    const handleLinkClick = (e, link) => {
         e.preventDefault();
-        const targetElement = document.querySelector(to);
-        if (targetElement) {
-            // Desplazamiento suave con el offset
-            window.scrollTo({
-                top: targetElement.offsetTop - 70, // Ajusta el valor de desplazamiento
-                behavior: 'smooth',
-            });
+
+        if (location.pathname === '/') {
+            // Si ya estás en la página principal, realiza el scroll a la sección
+            const targetElement = document.querySelector(link.to);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 70, // Ajuste para compensar el navbar
+                    behavior: 'smooth',
+                });
+            }
+        } else {
+            // Si estás en otra página, navega a la landing page con el hash
+            navigate(`/${link.to}`);
         }
 
         toggleMenu(); // Cerrar el menú hamburguesa
@@ -39,6 +45,7 @@ export const BurgerMenu = () => {
 
     const handleInicioClick = (e) => {
         e.preventDefault();
+
         if (location.pathname === '/') {
             // Ya estás en la página principal, scroll al top
             const topElement = document.querySelector('#inicio') || document.body;
@@ -47,7 +54,8 @@ export const BurgerMenu = () => {
             // Navegar a la página principal
             navigate('/#inicio');
         }
-        toggleMenu();
+
+        toggleMenu(); // Cerrar el menú hamburguesa
     };
 
     useEffect(() => {
@@ -77,8 +85,8 @@ export const BurgerMenu = () => {
                                     <a href="/" onClick={handleInicioClick} title={link.title}>
                                         {link.label}
                                     </a>
-                                ) : link.to.startsWith('#') && location.pathname === '/' ? (
-                                    <a href={link.to} onClick={(e) => handleScrollLink(e, link.to)} title={link.title}>
+                                ) : link.to.startsWith('#') ? (
+                                    <a href={link.to} onClick={(e) => handleLinkClick(e, link)} title={link.title}>
                                         {link.label}
                                     </a>
                                 ) : (
