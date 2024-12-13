@@ -38,8 +38,8 @@ export const Section1 = () => {
                     </div>
 
                     <div className="section-1-2-2">
-                        <h2 className="light-text">Andrea Díaz</h2>
-                        <p className="light-text-curve">Asesora Profesional de Seguros</p>
+                        <h2 className="light-text">Arturo Elizondo</h2>
+                        <p className="light-text-curve">Ceo VitaMet</p>
                     </div>
                 </div>
             </div>

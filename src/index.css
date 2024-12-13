@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
-    background: linear-gradient(to bottom right, #d4d4d4 10%, #f1f1f1);
+    background-color: white;
 }
 
 .light-text {
@@ -33,7 +33,7 @@ body {
 .navbar {
     position: fixed;
     display: flex;
-    background: linear-gradient(to bottom right, #d4d4d4 10%, #f1f1f1);
+    background-color: white;
     color: rgb(0, 0, 0);
     box-shadow: -4px 0 10px rgba(0, 0, 0, 1);
     width: 100%;
@@ -85,7 +85,7 @@ body {
     right: 0;
     width: 56%;
     height: 100%;
-    background: linear-gradient(to bottom right, #d4d4d4 10%, #f1f1f1);
+    background-color: white;
     padding-top: 80px;
     box-shadow: -4px 0 10px rgba(0, 0, 0, 0.3);
     transform: translateX(100%);
@@ -129,6 +129,11 @@ body {
 .burger-menu-nav li a {
     text-decoration: none;
     color: black;
+}
+
+.menu-nav li a.active,
+.burger-menu-nav li a.active {
+    font-weight: bold;
 }
 
 .menu-nav li:last-child a,

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import LogoNavbar from '../../assets/images/Logo MetLife NavBar 2.webp';
 import LogoNavbar2 from '../../assets/images/Logo Vitamet navbar.webp';
@@ -7,9 +8,11 @@ import { navLinks } from '../utils/NavBarMenu';
 export const NavBar = () => {
     const location = useLocation();
     const navigate = useNavigate();
+    const [activeLink, setActiveLink] = useState(navLinks[0].id); // Inicio como predeterminado
 
     const handleLinkClick = (e, item) => {
         e.preventDefault();
+        setActiveLink(item.id); // Establecer el enlace actual como activo
 
         if (location.pathname === '/') {
             // Si ya estás en la landing page
@@ -42,11 +45,21 @@ export const NavBar = () => {
                     {navLinks.map((item) => (
                         <li key={item.id}>
                             {item.to.startsWith('#') ? (
-                                <a href={item.to} onClick={(e) => handleLinkClick(e, item)} title={item.title}>
+                                <a
+                                    href={item.to}
+                                    onClick={(e) => handleLinkClick(e, item)}
+                                    title={item.title}
+                                    className={activeLink === item.id ? 'active' : ''}
+                                >
                                     {item.label}
                                 </a>
                             ) : (
-                                <NavLink to={item.to} title={item.title}>
+                                <NavLink
+                                    to={item.to}
+                                    title={item.title}
+                                    className={({ isActive }) => (isActive || activeLink === item.id ? 'active' : '')}
+                                    onClick={() => setActiveLink(item.id)}
+                                >
                                     {item.label}
                                 </NavLink>
                             )}
