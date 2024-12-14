@@ -1,5 +1,5 @@
 import MetLifeIcon from '../../../public/images/FavIcon.webp';
-import ImgSection1 from '../../assets/images/Imagen section 1.webp';
+import ImgSectionA1 from '../../assets/images/Imagen section A1.webp';
 
 export const SectionA1 = () => {
     return (
@@ -21,7 +21,7 @@ export const SectionA1 = () => {
                 <div className="section-1-2">
                     <div className="section-1-2-1">
                         <img
-                            src={ImgSection1}
+                            src={ImgSectionA1}
                             alt="Agente de seguros MetLife de brazos cruzados orgullosa de lo que ha logrado"
                             className="img-section-A1"
                             loading="lazy"
@@ -29,8 +29,8 @@ export const SectionA1 = () => {
                     </div>
 
                     <div className="section-1-2-2">
-                        <h2 className="light-text">Arturo Elizondo</h2>
-                        <p className="light-text-curve">Ceo VitaMet</p>
+                        <h2 className="light-text">Rocio Olivoso</h2>
+                        <p className="light-text-curve">Asesora Profesional de Seguros</p>
                     </div>
                 </div>
             </div>

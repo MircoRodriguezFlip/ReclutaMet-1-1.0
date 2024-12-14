@@ -26,7 +26,7 @@ export const Section4 = () => {
 
                         <div className="section-4-3-2">
                             <h2 className="light-text">Arturo Elizondo</h2>
-                            <p className="light-text-curve">Ceo VitaMet</p>
+                            <p className="light-text-curve">Promotor MetLife</p>
                         </div>
                     </div>
                 </div>
