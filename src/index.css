@@ -595,6 +595,53 @@ body {
     transition: background-color 0.3s ease;
 }
 
+/* ------------------------------------------------------------------------------------ AGENTE PAGE */
+
+.politicas-page-container {
+    padding: 0 10px;
+    padding-top: 80px;
+}
+
+.politicas-titulos {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.politicas-titulos h1 {
+    font-size: 25px;
+    margin: 0;
+}
+
+.politicas-titulos h2 {
+    font-size: 16px;
+}
+
+.politicas-titulos p {
+    margin: 0;
+    font-size: 15px;
+}
+
+.politicas-texto-1,
+.politicas-texto-2 {
+    padding: 0 10px;
+}
+
+.politicas-texto-1 p,
+.politicas-texto-2 p {
+    text-align: justify;
+    padding: 5px 0;
+    font-size: 15px;
+    margin: 0;
+}
+
+.politicas-texto-1 h3,
+.politicas-texto-1 h4,
+.politicas-texto-2 h3,
+.politicas-texto-2 h4 {
+    font-size: 16px;
+    padding-top: 20px;
+}
+
 /* ------------------------------------------------------------------------------------ FOOTER */
 
 .footer {
@@ -856,6 +903,44 @@ body {
         padding: 5px 50px;
         font-size: 16px;
         margin-bottom: 30px;
+    }
+
+    /* ------------------------------------------------------------------------------------ AGENTE PAGE */
+
+    .politicas-page-container {
+        padding: 0 20px;
+        padding-top: 90px;
+    }
+
+    .politicas-titulos h1 {
+        font-size: 28px;
+    }
+
+    .politicas-titulos h2 {
+        font-size: 18px;
+    }
+
+    .politicas-titulos p {
+        font-size: 16px;
+    }
+
+    .politicas-texto-1,
+    .politicas-texto-2 {
+        padding: 0 30px;
+    }
+
+    .politicas-texto-1 p,
+    .politicas-texto-2 p {
+        padding: 10px 0;
+        font-size: 15px;
+    }
+
+    .politicas-texto-1 h3,
+    .politicas-texto-1 h4,
+    .politicas-texto-2 h3,
+    .politicas-texto-2 h4 {
+        font-size: 17px;
+        padding-top: 25px;
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */
@@ -1122,6 +1207,43 @@ body {
         margin-bottom: 10px;
     }
 
+    /* ------------------------------------------------------------------------------------ AGENTE PAGE */
+
+    .politicas-page-container {
+        padding: 0 30px;
+        padding-top: 90px;
+    }
+
+    .politicas-titulos h1 {
+        font-size: 30px;
+    }
+
+    .politicas-titulos h2 {
+        font-size: 20px;
+    }
+
+    .politicas-titulos p {
+        font-size: 18px;
+    }
+
+    .politicas-texto-1,
+    .politicas-texto-2 {
+        padding: 0 40px;
+    }
+
+    .politicas-texto-1 p,
+    .politicas-texto-2 p {
+        font-size: 16px;
+    }
+
+    .politicas-texto-1 h3,
+    .politicas-texto-1 h4,
+    .politicas-texto-2 h3,
+    .politicas-texto-2 h4 {
+        font-size: 18px;
+        padding-top: 30px;
+    }
+
     /* ------------------------------------------------------------------------------------ FOOTER */
 
     .logo-footer {
@@ -1347,6 +1469,30 @@ body {
         padding: 7px 70px;
         font-size: 18px;
         margin-bottom: 10px;
+    }
+
+    /* ------------------------------------------------------------------------------------ AGENTE PAGE */
+
+    .politicas-page-container {
+        padding: 0 40px;
+        padding-top: 110px;
+    }
+
+    .politicas-titulos h1 {
+        font-size: 35px;
+    }
+
+    .politicas-titulos h2 {
+        font-size: 22px;
+    }
+
+    .politicas-titulos p {
+        font-size: 20px;
+    }
+
+    .politicas-texto-1,
+    .politicas-texto-2 {
+        padding: 0 50px;
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */
@@ -1606,6 +1752,37 @@ body {
         margin-bottom: 10px;
     }
 
+    /* ------------------------------------------------------------------------------------ AGENTE PAGE */
+
+    .politicas-page-container {
+        padding: 0 50px;
+        padding-top: 120px;
+    }
+
+    .politicas-titulos h1 {
+        font-size: 40px;
+    }
+
+    .politicas-titulos h2 {
+        font-size: 25px;
+    }
+
+    .politicas-titulos p {
+        font-size: 22px;
+    }
+
+    .politicas-texto-1,
+    .politicas-texto-2 {
+        padding: 0 60px;
+    }
+
+    .politicas-texto-1 h3,
+    .politicas-texto-1 h4,
+    .politicas-texto-2 h3,
+    .politicas-texto-2 h4 {
+        font-size: 20px;
+    }
+
     /* ------------------------------------------------------------------------------------ FOOTER */
 
     .logo-footer {
@@ -1832,6 +2009,39 @@ body {
         margin-bottom: 5px;
     }
 
+    /* ------------------------------------------------------------------------------------ AGENTE PAGE */
+
+    .politicas-page-container {
+        padding: 0 60px;
+        padding-top: 150px;
+    }
+
+    .politicas-titulos h1 {
+        font-size: 45px;
+    }
+
+    .politicas-titulos h2 {
+        font-size: 28px;
+    }
+
+    .politicas-texto-1,
+    .politicas-texto-2 {
+        padding: 0 70px;
+    }
+
+    .politicas-texto-1 p,
+    .politicas-texto-2 p {
+        font-size: 18px;
+    }
+
+    .politicas-texto-1 h3,
+    .politicas-texto-1 h4,
+    .politicas-texto-2 h3,
+    .politicas-texto-2 h4 {
+        font-size: 22px;
+        padding-top: 35px;
+    }
+
     /* ------------------------------------------------------------------------------------ FOOTER */
 
     .logo-footer {
@@ -2036,6 +2246,43 @@ body {
         padding: 9px 90px;
         font-size: 20px;
         margin-bottom: 5px;
+    }
+
+    /* ------------------------------------------------------------------------------------ AGENTE PAGE */
+
+    .politicas-page-container {
+        padding: 0 60px;
+        padding-top: 170px;
+    }
+
+    .politicas-titulos h1 {
+        font-size: 50px;
+    }
+
+    .politicas-titulos h2 {
+        font-size: 30px;
+    }
+
+    .politicas-titulos p {
+        font-size: 25px;
+    }
+
+    .politicas-texto-1,
+    .politicas-texto-2 {
+        padding: 0 80px;
+    }
+
+    .politicas-texto-1 p,
+    .politicas-texto-2 p {
+        font-size: 20px;
+    }
+
+    .politicas-texto-1 h3,
+    .politicas-texto-1 h4,
+    .politicas-texto-2 h3,
+    .politicas-texto-2 h4 {
+        font-size: 25px;
+        padding-top: 40px;
     }
 
     /* ------------------------------------------------------------------------------------ FOOTER */
