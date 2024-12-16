@@ -364,7 +364,7 @@ body {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    height: 130px;
+    height: 142px;
     padding: 0 5px;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -408,6 +408,7 @@ body {
 
 .img-section-4 {
     width: 150px;
+    margin-left: 30px;
 }
 
 .section-4-3-2 {
@@ -537,11 +538,12 @@ body {
     font-size: calc(1vw + 11px);
     padding: 0 20px;
     padding-top: 10px;
+    margin: 0;
 }
 
 .textos-section-A1 h2 {
     font-size: calc(2vw + 14px);
-    padding: 10px 0;
+    padding: 15px 0;
     padding-bottom: 20px;
 }
 
@@ -584,7 +586,6 @@ body {
 
 .boton-section-A2 {
     text-decoration: none;
-    margin-bottom: 20px;
     padding: 5px 50px;
     font-size: 16px;
     color: white;
@@ -595,11 +596,24 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* ------------------------------------------------------------------------------------ AGENTE PAGE */
+.hr-final-section-A2 {
+    opacity: 1;
+    padding: 0 10px;
+    margin: 0 auto 0;
+    margin-top: 18px;
+    border: none;
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(to left, #9fc750, #0065a8 60%, #1497ee);
+    border-radius: 5px;
+}
+
+/* ------------------------------------------------------------------------------------ POLITICAS PAGE */
 
 .politicas-page-container {
     padding: 0 10px;
     padding-top: 80px;
+    margin-bottom: 20px;
 }
 
 .politicas-titulos {
@@ -776,7 +790,7 @@ body {
     /* ----------------------------------------------------- SECTION 3 */
 
     .necesito-item {
-        height: 140px;
+        height: 142px;
     }
 
     .necesito-item img {
@@ -896,13 +910,17 @@ body {
     }
 
     .section-A2-2 {
-        height: 300px;
+        height: 270px;
+        padding: 0 40px;
     }
 
     .boton-section-A2 {
         padding: 5px 50px;
         font-size: 16px;
-        margin-bottom: 30px;
+    }
+
+    .hr-final-section-A2 {
+        margin-top: 30px;
     }
 
     /* ------------------------------------------------------------------------------------ AGENTE PAGE */
@@ -997,16 +1015,12 @@ body {
     /* ----------------------------------------------------- SECTION 1 */
 
     .section-1-1 {
-        margin-left: 30px;
+        margin-left: 80px;
     }
 
     .boton-section-1 {
         margin: 30px 0;
         padding: 5px 15px;
-    }
-
-    .section-1-2 {
-        width: 40%;
     }
 
     .section-1-2-2 {
@@ -1102,8 +1116,9 @@ body {
     }
 
     .img-section-4 {
-        width: 300px;
-        margin-left: 0px;
+        width: 315px;
+        margin-left: -5px;
+        margin-top: 65px;
     }
 
     .section-4-3-2 {
@@ -1198,7 +1213,8 @@ body {
     }
 
     .section-A2-2 {
-        height: 400px;
+        height: 330px;
+        padding: 0 60px;
     }
 
     .boton-section-A2 {
@@ -1283,7 +1299,7 @@ body {
     /* ----------------------------------------------------- SECTION 1 */
 
     .section-1-1 {
-        margin-left: 30px;
+        margin-left: 100px;
     }
 
     .section-1-parrafo {
@@ -1297,11 +1313,12 @@ body {
 
     .section-1-2 {
         margin-top: -60px;
+        width: 40%;
     }
 
     .img-section-1 {
         width: 270px;
-        margin-left: 7vw;
+        margin-left: 6vw;
     }
 
     .section-1-2-2 {
@@ -1380,8 +1397,9 @@ body {
     }
 
     .img-section-4 {
-        width: 320px;
-        margin-left: 25px;
+        width: 350px;
+        margin-left: 15px;
+        margin-top: 50px;
     }
 
     .section-4-3-2 {
@@ -1443,7 +1461,7 @@ body {
 
     .img-section-A1 {
         width: 300px;
-        margin-left: 7vw;
+        margin-left: 4vw;
     }
 
     /* ----------------------------------------------------- SECTION A2 */
@@ -1461,8 +1479,8 @@ body {
     }
 
     .section-A2-2 {
-        height: 420px;
-        padding: 0 70px;
+        height: 400px;
+        padding: 0 90px;
     }
 
     .boton-section-A2 {
@@ -1543,7 +1561,8 @@ body {
     /* ----------------------------------------------------- SECTION 1 */
 
     .section-1-1 {
-        margin-left: 65px;
+        margin-left: 110px;
+        padding: 0 30px;
     }
 
     .section-1-parrafo {
@@ -1560,7 +1579,7 @@ body {
     }
 
     .img-section-1 {
-        margin-left: 9vw;
+        margin-left: 7vw;
     }
 
     .section-1-2-2 {
@@ -1624,7 +1643,7 @@ body {
     }
 
     .necesito-item {
-        height: 165px;
+        height: 170px;
     }
 
     .necesito-item p {
@@ -1634,8 +1653,9 @@ body {
     /* ----------------------------------------------------- SECTION 4 */
 
     .img-section-4 {
-        width: 300px;
-        margin-left: 35px;
+        width: 350px;
+        margin-left: 95px;
+        margin-top: 25px;
     }
 
     .section-4-3-2 {
@@ -1723,7 +1743,7 @@ body {
 
     .img-section-A1 {
         width: 320px;
-        margin-left: 9vw;
+        margin-left: 4vw;
     }
 
     /* ----------------------------------------------------- SECTION A2 */
@@ -1742,8 +1762,8 @@ body {
     }
 
     .section-A2-2 {
-        height: 420px;
-        padding: 0 15vw;
+        height: 410px;
+        padding: 0 19vw;
     }
 
     .boton-section-A2 {
@@ -1829,8 +1849,9 @@ body {
     /* ----------------------------------------------------- SECTION 1 */
 
     .section-1-1 {
-        margin-left: 80px;
+        margin-left: 140px;
         margin-top: 40px;
+        padding: 0 50px;
     }
 
     .section-1-parrafo {
@@ -1847,7 +1868,7 @@ body {
     }
 
     .img-section-1 {
-        margin-left: 8vw;
+        margin-left: 6vw;
         width: 330px;
     }
 
@@ -1914,8 +1935,9 @@ body {
     /* ----------------------------------------------------- SECTION 4 */
 
     .img-section-4 {
-        width: 310px;
-        margin-left: 35px;
+        width: 400px;
+        margin-left: 100px;
+        margin-top: 0px;
     }
 
     .section-4-3-2 {
@@ -1975,7 +1997,7 @@ body {
 
     .section-A1-container {
         padding: 30px 0;
-        margin-top: 40px;
+        margin-top: 50px;
     }
 
     .textos-section-A1 h1 {
@@ -1984,6 +2006,11 @@ body {
 
     .textos-section-A1 p {
         font-size: calc(1vw + 7px);
+    }
+
+    .img-section-A1 {
+        width: 370px;
+        margin-left: 2vw;
     }
 
     /* ----------------------------------------------------- SECTION A2 */
@@ -1999,8 +2026,8 @@ body {
     }
 
     .section-A2-2 {
-        height: 400px;
-        padding: 0 20vw;
+        height: 410px;
+        padding: 0 25vw;
     }
 
     .boton-section-A2 {
@@ -2080,8 +2107,9 @@ body {
     /* ----------------------------------------------------- SECTION 1 */
 
     .section-1-1 {
-        margin-left: 130px;
-        margin-top: 100px;
+        margin-left: 180px;
+        margin-top: 110px;
+        padding: 0 80px;
     }
 
     .section-1-parrafo {
@@ -2093,11 +2121,12 @@ body {
     }
 
     .section-1-2 {
-        margin-top: -20px;
+        margin-top: -50px;
     }
 
     .img-section-1 {
         width: 400px;
+        margin-left: 2vw;
     }
 
     .section-1-2-2 {
@@ -2163,8 +2192,9 @@ body {
     /* ----------------------------------------------------- SECTION 4 */
 
     .img-section-4 {
-        width: 340px;
-        margin-left: 50px;
+        width: 400px;
+        margin-left: 200px;
+        margin-top: 20px;
     }
 
     .section-4-3-2 {
@@ -2213,7 +2243,7 @@ body {
     /* ----------------------------------------------------- SECTION A1 */
 
     .section-A1-container {
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     .textos-section-A1 h1 {
@@ -2225,7 +2255,16 @@ body {
         padding: 15px 50px;
     }
 
+    .img-section-A1 {
+        margin-left: 2vw;
+        margin-top: 30px;
+    }
+
     /* ----------------------------------------------------- SECTION A2 */
+
+    .section-A2-container {
+        margin-top: 30px;
+    }
 
     .section-A2-container h2 {
         padding: 0 200px;
@@ -2238,8 +2277,8 @@ body {
     }
 
     .section-A2-2 {
-        height: 500px;
-        padding: 0 20vw;
+        height: 470px;
+        padding: 0 25vw;
     }
 
     .boton-section-A2 {

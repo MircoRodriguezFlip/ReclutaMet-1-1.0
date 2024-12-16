@@ -21,7 +21,7 @@ export const SectionA2 = () => {
             </Link>
 
             <div>
-                <hr className="hr-final-section-2" />
+                <hr className="hr-final-section-A2" />
             </div>
         </section>
     );
