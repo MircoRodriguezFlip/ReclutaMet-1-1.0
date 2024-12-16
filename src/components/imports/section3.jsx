@@ -17,7 +17,7 @@ export const Section3 = () => {
         <section>
             <div className="section-3-container">
                 <h2 className="necesito-title bold-text" onClick={toggleVisibility}>
-                    ¿Que necesito para ser Agente MetLife?
+                    ¿Qué necesito para ser Agente MetLife?
                 </h2>
 
                 <div className={`necesito-section ${isVisible ? 'visible' : 'hidden'}`}>
@@ -26,7 +26,7 @@ export const Section3 = () => {
                             { img: ImgNecesito1, text: 'Licenciatura terminada, trunca o pasante', alt: 'sombrero de recien graduado' },
                             { img: ImgNecesito2, text: 'Alta iniciativa empresarial', alt: 'ampolleta con un cerebro dentro teniendo una idea' },
                             { img: ImgNecesito3, text: 'Facilidad para relacionarse', alt: '3 personas enlazadas' },
-                            { img: ImgNecesito4, text: 'Expectativa económica mayor a $100.000 pesos', alt: 'grafica de dinero en aumento' },
+                            { img: ImgNecesito4, text: 'Expectativa económica mayor a 100 mil pesos', alt: 'grafica de dinero en aumento' },
                             { img: ImgNecesito5, text: 'Imagen corporativa', alt: '3 personas posando para una foto con la empresa a sus espaldas' },
                             { img: ImgNecesito6, text: 'Habilidad comercial', alt: '2 personas llegando a un acuerdo mientras se dan la mano' },
                         ].map((necesito, index) => (

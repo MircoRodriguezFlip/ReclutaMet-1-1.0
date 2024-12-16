@@ -1644,6 +1644,7 @@ body {
 
     .necesito-item {
         height: 170px;
+        padding: 0 20px;
     }
 
     .necesito-item p {

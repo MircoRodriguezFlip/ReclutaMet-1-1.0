@@ -29,7 +29,7 @@ export const SectionA1 = () => {
                     </div>
 
                     <div className="section-1-2-2">
-                        <h2 className="light-text">Roció Olivos</h2>
+                        <h2 className="light-text">Rocío Olivos</h2>
                         <p className="light-text-curve">Asesora Profesional de Seguros</p>
                     </div>
                 </div>
