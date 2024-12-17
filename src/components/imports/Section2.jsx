@@ -22,16 +22,40 @@ export const Section2 = () => {
 
                 <div className={`beneficio-section ${isVisible ? 'visible' : 'hidden'}`}>
                     {[
-                        { img: ImgBeneficio1, text: 'Desarrollo/capacitación permanente y constante.' },
-                        { img: ImgBeneficio2, text: 'Crecimiento profesional' },
-                        { img: ImgBeneficio3, text: 'Capacitación en la prospección y venta' },
-                        { img: ImgBeneficio4, text: 'Comisiones y bonos mayores a 100 mil pesos mensualmente sin tope' },
-                        { img: ImgBeneficio5, text: 'Seminarios nacionales e internacionales' },
-                        { img: ImgBeneficio6, text: 'Posibilidad de administrar tu tiempo' },
+                        {
+                            img: ImgBeneficio1,
+                            text: 'Desarrollo/capacitación permanente y constante.',
+                            alt: 'Personas de palitos en una conferencia',
+                        },
+                        {
+                            img: ImgBeneficio2,
+                            text: 'Crecimiento profesional',
+                            alt: 'Cabeza animada de persona con engranes y flechas apuntando hacia arriba',
+                        },
+                        {
+                            img: ImgBeneficio3,
+                            text: 'Capacitación en la prospección y venta',
+                            alt: 'Personas de palitos en una conferencia sobre ventas',
+                        },
+                        {
+                            img: ImgBeneficio4,
+                            text: 'Comisiones y bonos mayores a 100 mil pesos mensualmente sin tope',
+                            alt: 'Moneda con grafico en subida',
+                        },
+                        {
+                            img: ImgBeneficio5,
+                            text: 'Seminarios nacionales e internacionales',
+                            alt: 'México, visto desde una perspectiva aérea completa',
+                        },
+                        {
+                            img: ImgBeneficio6,
+                            text: 'Posibilidad de administrar tu tiempo',
+                            alt: 'Reloj sobre un calendario, indicando libertad de horarios',
+                        },
                     ].map((beneficio, index) => (
                         <div className="beneficio-item" key={index}>
                             <div className="background-circle-beneficio">
-                                <img src={beneficio.img} alt={`Beneficio ${index + 1}`} className="img-circle-beneficio" loading="lazy" />
+                                <img src={beneficio.img} alt={beneficio.alt} className="img-circle-beneficio" loading="lazy" />
                             </div>
                             <div className="content-parrafo-beneficio">
                                 <p className="light-text">{beneficio.text}</p>

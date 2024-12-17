@@ -4,6 +4,20 @@ body {
     background-color: white;
 }
 
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .light-text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -162,6 +176,8 @@ body {
 
 .logo-metlife-main {
     width: 50px;
+    user-select: none;
+    pointer-events: none;
 }
 
 .parrafo2 {
@@ -224,6 +240,16 @@ body {
 .img-section-1 {
     width: 150px;
     margin-left: 50px;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.img-section-1.slide-in {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .section-1-2-2 {
@@ -309,6 +335,8 @@ body {
     width: 50px;
     height: auto;
     object-fit: contain;
+    user-select: none;
+    pointer-events: none;
 }
 
 .content-parrafo-beneficio {
@@ -378,6 +406,11 @@ body {
     margin-top: 10px;
 }
 
+.img-section-3 {
+    user-select: none;
+    pointer-events: none;
+}
+
 .content-parrafo-necesito {
     display: flex;
     justify-content: center;
@@ -409,6 +442,16 @@ body {
 .img-section-4 {
     width: 150px;
     margin-left: 30px;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.img-section-4.slide-in {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .section-4-3-2 {
@@ -550,6 +593,16 @@ body {
 .img-section-A1 {
     width: 150px;
     margin-left: 50px;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.img-section-A1.slide-in {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .hr-final-section-A1 {
@@ -606,6 +659,25 @@ body {
     width: 100%;
     background: linear-gradient(to left, #9fc750, #0065a8 60%, #1497ee);
     border-radius: 5px;
+}
+
+/* ------------------------------------------------------------------------------------ FORMULARIO ENVIADO */
+
+.send-form-container {
+    padding: 0 10px;
+    padding-top: 80px;
+    display: grid;
+    text-align: center;
+    overflow: hidden;
+}
+
+.send-form-container h1 {
+    font-size: 40px;
+    padding: 10px 0;
+}
+
+.send-form-container p {
+    padding-bottom: 20px;
 }
 
 /* ------------------------------------------------------------------------------------ POLITICAS PAGE */
@@ -667,6 +739,8 @@ body {
 
 .logo-footer {
     height: 15px;
+    user-select: none;
+    pointer-events: none;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -923,7 +997,21 @@ body {
         margin-top: 30px;
     }
 
-    /* ------------------------------------------------------------------------------------ AGENTE PAGE */
+    /* ------------------------------------------------------------------------------------ FORMULARIO ENVIADO */
+
+    .send-form-container {
+        padding-top: 110px;
+    }
+
+    .send-form-container h1 {
+        font-size: 50px;
+    }
+
+    .send-form-container p {
+        padding: 0 30px;
+    }
+
+    /* ------------------------------------------------------------------------------------ POLITICAS PAGE */
 
     .politicas-page-container {
         padding: 0 20px;
@@ -1223,7 +1311,23 @@ body {
         margin-bottom: 10px;
     }
 
-    /* ------------------------------------------------------------------------------------ AGENTE PAGE */
+    /* ------------------------------------------------------------------------------------ FORMULARIO ENVIADO */
+
+    .send-form-container {
+        padding-top: 110px;
+    }
+
+    .send-form-container h1 {
+        font-size: 60px;
+    }
+
+    .send-form-container p {
+        font-size: 20px;
+        padding: 0 50px;
+        padding-bottom: 20px;
+    }
+
+    /* ------------------------------------------------------------------------------------ POLITICAS PAGE */
 
     .politicas-page-container {
         padding: 0 30px;
@@ -1739,7 +1843,7 @@ body {
 
     .section-A1-container {
         padding: 30px 0;
-        margin-top: 80px;
+        margin-top: 100px;
     }
 
     .img-section-A1 {
@@ -1773,7 +1877,23 @@ body {
         margin-bottom: 10px;
     }
 
-    /* ------------------------------------------------------------------------------------ AGENTE PAGE */
+    /* ------------------------------------------------------------------------------------ FORMULARIO ENVIADO */
+
+    .send-form-container {
+        padding-top: 150px;
+    }
+
+    .send-form-container h1 {
+        font-size: 60px;
+    }
+
+    .send-form-container p {
+        font-size: 20px;
+        padding: 0 50px;
+        padding-bottom: 20px;
+    }
+
+    /* ------------------------------------------------------------------------------------ POLITICAS PAGE */
 
     .politicas-page-container {
         padding: 0 50px;
@@ -2037,7 +2157,22 @@ body {
         margin-bottom: 5px;
     }
 
-    /* ------------------------------------------------------------------------------------ AGENTE PAGE */
+    /* ------------------------------------------------------------------------------------ FORMULARIO ENVIADO */
+
+    .send-form-container {
+        padding-top: 150px;
+    }
+
+    .send-form-container h1 {
+        font-size: 100px;
+    }
+
+    .send-form-container p {
+        font-size: 30px;
+        padding-bottom: 30px;
+    }
+
+    /* ------------------------------------------------------------------------------------ POLITICAS PAGE */
 
     .politicas-page-container {
         padding: 0 60px;
@@ -2288,7 +2423,22 @@ body {
         margin-bottom: 5px;
     }
 
-    /* ------------------------------------------------------------------------------------ AGENTE PAGE */
+    /* ------------------------------------------------------------------------------------ FORMULARIO ENVIADO */
+
+    .send-form-container {
+        padding-top: 200px;
+    }
+
+    .send-form-container h1 {
+        font-size: 130px;
+    }
+
+    .send-form-container p {
+        font-size: 30px;
+        padding-bottom: 50px;
+    }
+
+    /* ------------------------------------------------------------------------------------ POLITICAS PAGE */
 
     .politicas-page-container {
         padding: 0 60px;

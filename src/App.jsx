@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { NavBar } from './components/common/NavBar';
 import { LadingPage } from './components/pages/LandingPage';
 import { AgentePage } from './components/pages/AgentePage';
+import { SendFormPage } from './components/pages/SendFormPage';
 import { PoliticasPage } from './components/pages/PoliticasPage';
 import { Footer } from './components/common/footer';
 import { ScrollToTop } from './hooks/ScrollTop';
@@ -16,6 +17,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<LadingPage />} />
                 <Route path="/eres-agente" element={<AgentePage />} />
+                <Route path="/formulario-enviado" element={<SendFormPage />} />
                 <Route path="/politica-privacidad" element={<PoliticasPage />} />
             </Routes>
 

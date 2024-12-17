@@ -1,7 +1,33 @@
+import { useEffect, useRef } from 'react';
 import ImgSection4 from '../../assets/images/Imagen section 4.webp';
 import { FormContact } from './Form';
 
 export const Section4 = () => {
+    const imageRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('slide-in');
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+
+        if (imageRef.current) {
+            observer.observe(imageRef.current);
+        }
+
+        return () => {
+            if (imageRef.current) {
+                observer.unobserve(imageRef.current);
+            }
+        };
+    }, []);
+
     return (
         <section>
             <div>
@@ -20,6 +46,7 @@ export const Section4 = () => {
                                 src={ImgSection4}
                                 alt="CEO de VitaMet en traje, invitandote a dejar tus datos en el formulario."
                                 className="img-section-4"
+                                ref={imageRef}
                                 loading="lazy"
                             />
                         </div>

@@ -1,13 +1,13 @@
 export const PoliticasPage = () => {
     return (
-        <section className="politicas-page-container">
-            <div className="politicas-titulos light-text">
+        <main className="politicas-page-container">
+            <section className="politicas-titulos light-text">
                 <h1 className="bold-text">AVISO DE PRIVACIDAD</h1>
                 <p>13/12/2024</p>
                 <h2 className="bold-text">TÉRMINOS Y CONDICIONES DE USO</h2>
-            </div>
+            </section>
 
-            <div className="politicas-texto-1 light-text">
+            <section className="politicas-texto-1 light-text">
                 <h3 className="bold-text">MetLife México S.A. de C.V.</h3>
 
                 <p>
@@ -380,9 +380,9 @@ export const PoliticasPage = () => {
                     Este convenio estará sujeto y será interpretado de acuerdo con las leyes y ante los tribunales de la Ciudad de Monterrey, Nuevo
                     León.
                 </p>
-            </div>
+            </section>
 
-            <div className="politicas-texto-2">
+            <section className="politicas-texto-2">
                 <h3 className="bold-text">AVISO DE PRIVACIDAD MetLife México S.A. de C.V.</h3>
 
                 <p>
@@ -510,7 +510,7 @@ export const PoliticasPage = () => {
                     El RESPONSABLE comunicará a los TITULARES, cualquier cambio al Aviso de Privacidad de conformidad con lo establecido por LA LEY,
                     pudiendo ser a través de medio electrónico, óptico, sonoro, visual, o a través de cualquier otra tecnología.
                 </p>
-            </div>
-        </section>
+            </section>
+        </main>
     );
 };

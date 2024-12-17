@@ -1,7 +1,33 @@
+import { useEffect, useRef } from 'react';
 import MetLifeIcon from '../../../public/images/FavIcon.webp';
 import ImgSectionA1 from '../../assets/images/Imagen section A1.webp';
 
 export const SectionA1 = () => {
+    const imageRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('slide-in');
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+
+        if (imageRef.current) {
+            observer.observe(imageRef.current);
+        }
+
+        return () => {
+            if (imageRef.current) {
+                observer.unobserve(imageRef.current);
+            }
+        };
+    }, []);
+
     return (
         <section>
             <div className="section-A1-container">
@@ -24,6 +50,7 @@ export const SectionA1 = () => {
                             src={ImgSectionA1}
                             alt="Agente de seguros MetLife de brazos cruzados orgullosa de lo que ha logrado"
                             className="img-section-A1"
+                            ref={imageRef}
                             loading="lazy"
                         />
                     </div>

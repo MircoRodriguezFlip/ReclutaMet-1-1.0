@@ -31,7 +31,7 @@ export const Section3 = () => {
                             { img: ImgNecesito6, text: 'Habilidad comercial', alt: '2 personas llegando a un acuerdo mientras se dan la mano' },
                         ].map((necesito, index) => (
                             <div className="necesito-item" key={index}>
-                                <img src={necesito.img} alt={necesito.alt} loading="lazy" />
+                                <img src={necesito.img} alt={necesito.alt} className="img-section-3" loading="lazy" />
 
                                 <div className="content-parrafo-necesito">
                                     <p className="light-text">{necesito.text}</p>

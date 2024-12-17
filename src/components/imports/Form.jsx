@@ -27,7 +27,7 @@ export const FormContact = () => {
                     text: 'Datos enviados correctamente',
                     icon: 'success',
                 }).then(() => {
-                    navigate('/FormularioEnviado');
+                    navigate('/formulario-enviado');
                 });
             } else {
                 Swal.fire({
