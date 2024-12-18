@@ -747,6 +747,27 @@ body {
     transform: translateX(0);
 }
 
+/* -------------------------------------- WHATSAPP */
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 30px;
+    right: 0px;
+    background: none;
+    border: none;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-icon:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-image {
+    width: 60px;
+    height: auto;
+}
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 @media (min-width: 576px) {
@@ -1372,6 +1393,12 @@ body {
 
     .logo-footer {
         height: 20px;
+    }
+
+    /* -------------------------------------- WHATSAPP */
+
+    .whatsapp-image {
+        width: 80px;
     }
 }
 
@@ -2215,6 +2242,17 @@ body {
     .logo-footer {
         height: 30px;
     }
+
+    /* -------------------------------------- WHATSAPP */
+
+    .whatsapp-icon {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .whatsapp-image {
+        width: 100px;
+    }
 }
 
 @media (min-width: 1700px) {
@@ -2484,5 +2522,12 @@ body {
 
     .logo-footer {
         height: 35px;
+    }
+
+    /* -------------------------------------- WHATSAPP */
+
+    .whatsapp-icon {
+        bottom: 20px;
+        right: 20px;
     }
 }
