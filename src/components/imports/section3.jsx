@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import ImgNecesito1 from '../../assets/images/necesito 1.webp';
 import ImgNecesito2 from '../../assets/images/necesito 2.webp';
 import ImgNecesito3 from '../../assets/images/necesito 3.webp';
@@ -8,13 +8,22 @@ import ImgNecesito6 from '../../assets/images/necesito 6.webp';
 
 export const Section3 = () => {
     const [isVisible, setIsVisible] = useState(false);
+    const sectionRef = useRef(null);
 
     const toggleVisibility = () => {
         setIsVisible(!isVisible);
+
+        if (isVisible && sectionRef.current) {
+            const offsetTop = sectionRef.current.offsetTop - 80;
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth',
+            });
+        }
     };
 
     return (
-        <section>
+        <section ref={sectionRef}>
             <div className="section-3-container">
                 <h2 className="necesito-title bold-text" onClick={toggleVisibility}>
                     ¿Qué necesito para ser Agente MetLife?

@@ -6,15 +6,15 @@ export const Section1 = () => {
         e.preventDefault();
         const targetElement = document.querySelector('#contacto');
         if (targetElement) {
-            // Realizar el desplazamiento suave
             window.scrollTo({
-                top: targetElement.offsetTop - 80, // Ajusta el valor para que el navbar no tape la parte superior
+                top: targetElement.offsetTop - 80,
                 behavior: 'smooth',
             });
         }
     };
 
     const imageRef = useRef(null);
+    const cintillaRef = useRef(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -32,9 +32,16 @@ export const Section1 = () => {
             observer.observe(imageRef.current);
         }
 
+        if (cintillaRef.current) {
+            observer.observe(cintillaRef.current);
+        }
+
         return () => {
             if (imageRef.current) {
                 observer.unobserve(imageRef.current);
+            }
+            if (cintillaRef.current) {
+                observer.unobserve(cintillaRef.current);
             }
         };
     }, []);
@@ -64,7 +71,7 @@ export const Section1 = () => {
                         />
                     </div>
 
-                    <div className="section-1-2-2">
+                    <div className="section-1-2-2" ref={cintillaRef}>
                         <h2 className="light-text">Andrea Díaz</h2>
                         <p className="light-text-curve">Asesora Profesional de Seguros</p>
                     </div>

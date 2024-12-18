@@ -4,6 +4,7 @@ import ImgSectionA1 from '../../assets/images/Imagen section A1.webp';
 
 export const SectionA1 = () => {
     const imageRef = useRef(null);
+    const cintillaRef = useRef(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -21,9 +22,16 @@ export const SectionA1 = () => {
             observer.observe(imageRef.current);
         }
 
+        if (cintillaRef.current) {
+            observer.observe(cintillaRef.current);
+        }
+
         return () => {
             if (imageRef.current) {
                 observer.unobserve(imageRef.current);
+            }
+            if (cintillaRef.current) {
+                observer.unobserve(cintillaRef.current);
             }
         };
     }, []);
@@ -55,7 +63,7 @@ export const SectionA1 = () => {
                         />
                     </div>
 
-                    <div className="section-1-2-2">
+                    <div className="section-1-2-2" ref={cintillaRef}>
                         <h2 className="light-text">Rocío Olivos</h2>
                         <p className="light-text-curve">Asesora Profesional de Seguros</p>
                     </div>

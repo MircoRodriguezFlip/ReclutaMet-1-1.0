@@ -4,6 +4,7 @@ import { FormContact } from './Form';
 
 export const Section4 = () => {
     const imageRef = useRef(null);
+    const cintillaRef = useRef(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -21,9 +22,16 @@ export const Section4 = () => {
             observer.observe(imageRef.current);
         }
 
+        if (cintillaRef.current) {
+            observer.observe(cintillaRef.current);
+        }
+
         return () => {
             if (imageRef.current) {
                 observer.unobserve(imageRef.current);
+            }
+            if (cintillaRef.current) {
+                observer.unobserve(cintillaRef.current);
             }
         };
     }, []);
@@ -51,7 +59,7 @@ export const Section4 = () => {
                             />
                         </div>
 
-                        <div className="section-4-3-2">
+                        <div className="section-4-3-2" ref={cintillaRef}>
                             <h2 className="light-text">Arturo Elizondo</h2>
                             <p className="light-text-curve">Promotor MetLife</p>
                         </div>

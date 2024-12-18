@@ -145,6 +145,14 @@ body {
     color: black;
 }
 
+.menu-nav li a:hover {
+    color: #9fc750;
+}
+
+.menu-nav li a.active:hover {
+    color: black;
+}
+
 .menu-nav li a.active,
 .burger-menu-nav li a.active {
     font-weight: bold;
@@ -247,11 +255,6 @@ body {
     transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 }
 
-.img-section-1.slide-in {
-    opacity: 1;
-    transform: translateX(0);
-}
-
 .section-1-2-2 {
     position: absolute;
     bottom: 15px;
@@ -262,6 +265,9 @@ body {
     padding: 2px 25px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateX(20px);
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 }
 
 .section-1-2-2 h2 {
@@ -449,11 +455,6 @@ body {
     transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 }
 
-.img-section-4.slide-in {
-    opacity: 1;
-    transform: translateX(0);
-}
-
 .section-4-3-2 {
     position: absolute;
     bottom: 15px;
@@ -464,6 +465,9 @@ body {
     padding: 2px 60px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 }
 
 .section-4-3-2 h2 {
@@ -598,11 +602,6 @@ body {
     opacity: 0;
     transform: translateX(50px);
     transition: transform 0.6s ease-out, opacity 0.6s ease-out;
-}
-
-.img-section-A1.slide-in {
-    opacity: 1;
-    transform: translateX(0);
 }
 
 .hr-final-section-A1 {
@@ -741,6 +740,11 @@ body {
     height: 15px;
     user-select: none;
     pointer-events: none;
+}
+
+.slide-in {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -1758,13 +1762,14 @@ body {
     /* ----------------------------------------------------- SECTION 4 */
 
     .img-section-4 {
-        width: 350px;
+        width: 305px;
         margin-left: 95px;
-        margin-top: 25px;
+        margin-top: 0px;
     }
 
     .section-4-3-2 {
         padding: 1vw 18vw;
+        bottom: 25px;
     }
 
     .section-4-3-2 h2 {
@@ -1791,18 +1796,18 @@ body {
     }
 
     .content-form label {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .content-form input,
     .content-form select,
     .content-form option {
-        font-size: 16px;
-        padding: 4px 10px;
+        font-size: 15px;
+        padding: 2px 10px;
     }
 
     .input-control {
-        padding: 5px 0;
+        padding: 1px 0;
     }
 
     .checkbox-control {
@@ -1814,7 +1819,7 @@ body {
     }
 
     .boton-form {
-        padding: 8px 80px;
+        padding: 6px 80px;
         margin-left: 10px; /* distancia del spinner */
     }
 
