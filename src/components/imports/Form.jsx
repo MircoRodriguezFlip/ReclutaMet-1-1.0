@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import Swal from 'sweetalert2';
@@ -7,7 +7,7 @@ import { tiposCedula } from '../utils/TiposCedula';
 import { useForm } from '../../hooks/useForm';
 
 export const FormContact = () => {
-    const navigate = useNavigate();
+    const [formSubmitted, setFormSubmitted] = useState(false);
     const { formData, errors, loading, handleChange, handleSubmit, handleFileChange, showExtraFields, toggleExtraFields } = useForm(
         {
             nombreCompleto: '',
@@ -22,12 +22,11 @@ export const FormContact = () => {
         },
         (success, data) => {
             if (success) {
+                setFormSubmitted(true);
                 Swal.fire({
                     title: 'Excelente',
                     text: 'Datos enviados correctamente',
                     icon: 'success',
-                }).then(() => {
-                    navigate('/formulario-enviado');
                 });
             } else {
                 Swal.fire({
@@ -38,6 +37,15 @@ export const FormContact = () => {
             }
         }
     );
+
+    if (formSubmitted) {
+        return (
+            <div className="confirmation-message">
+                <h2>¡Gracias por contactarnos!</h2>
+                <p>Hemos recibido tu información y nos pondremos en contacto contigo pronto.</p>
+            </div>
+        );
+    }
 
     return (
         <form onSubmit={handleSubmit} className="content-form " noValidate>

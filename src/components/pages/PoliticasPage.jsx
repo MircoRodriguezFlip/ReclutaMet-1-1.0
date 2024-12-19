@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 export const PoliticasPage = () => {
     return (
         <main className="politicas-page-container">
@@ -12,8 +14,11 @@ export const PoliticasPage = () => {
 
                 <p>
                     Ponemos a su disposición los siguientes TÉRMINOS Y CONDICIONES DE USO, los cuales son aplicables por el simple uso o acceso a
-                    cualquiera de las Páginas que integran la página web www.quieroseragentemetlife.com.mx propiedad de MetLife México S.A. de C.V.
-                    que en lo sucesivo se denominará "METLIFE MEXICO".
+                    cualquiera de las Páginas que integran la página web{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>{' '}
+                    propiedad de MetLife México S.A. de C.V. que en lo sucesivo se denominará "METLIFE MEXICO".
                 </p>
 
                 <p>
@@ -23,12 +28,19 @@ export const PoliticasPage = () => {
 
                 <p>
                     En caso de no aceptar en forma absoluta y completa los términos y condiciones de este convenio, el usuario deberá abstenerse de
-                    acceder, utilizar y observar el sitio Web www.quieroseragentemetlife.com.mx.
+                    acceder, utilizar y observar el sitio Web{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>
+                    .
                 </p>
 
                 <p>
-                    Y en caso de que el usuario acceda, utilice y observe el sitio web www.quieroseragentemetlife.com.mx se considerará como una
-                    absoluta y expresa aceptación de los TÉRMINOS Y CONDICIONES DE USO aquí estipulados.
+                    Y en caso de que el usuario acceda, utilice y observe el sitio web{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>{' '}
+                    se considerará como una absoluta y expresa aceptación de los TÉRMINOS Y CONDICIONES DE USO aquí estipulados.
                 </p>
 
                 <p>
@@ -47,40 +59,59 @@ export const PoliticasPage = () => {
                 <h4 className="bold-text">Convenio</h4>
 
                 <p>
-                    Convenio de adhesión para el uso de la página de Internet www.quieroseragentemetlife.com.mx que celebran: por una parte, METLIFE
-                    MEXICO y, por la otra, el usuario, sujetándose, ambas partes, a lo establecido en este documento.
+                    Convenio de adhesión para el uso de la página de Internet{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>{' '}
+                    que celebran: por una parte, METLIFE MEXICO y, por la otra, el usuario, sujetándose, ambas partes, a lo establecido en este
+                    documento.
                 </p>
 
                 <h4 className="bold-text">Licencia</h4>
 
                 <p>
                     Por virtud de la celebración de este convenio, le otorga y concede al usuario el derecho no exclusivo, revocable y no transferible
-                    de ver y utilizar el sitio Web www.quieroseragentemetlife.com.mx de conformidad con los TÉRMINOS Y CONDICIONES DE USO que aquí se
-                    estipulan.
+                    de ver y utilizar el sitio Web{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>{' '}
+                    de conformidad con los TÉRMINOS Y CONDICIONES DE USO que aquí se estipulan.
                 </p>
 
                 <p>
                     Para los efectos del presente convenio, las partes acuerdan que por "usuario" se entenderá a cualquier persona de cualquier
-                    naturaleza que ingrese al sitio Web www.quieroseragentemetlife.com.mx y/o a cualquiera de las subpáginas que despliegan su
-                    contenido y/o a la persona de cualquier naturaleza que se dé de alta y/o use cualquiera de los servicios que se ofrecen a través
-                    de dicha página. El usuario sólo podrá imprimir y/o copiar cualquier información contenida o publicada en el sitio Web
-                    www.quieroseragentemetlife.com.mx exclusivamente para uso personal, queda terminantemente prohibido el uso comercial de dicha
-                    información.
+                    naturaleza que ingrese al sitio Web{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>{' '}
+                    y/o a cualquiera de las subpáginas que despliegan su contenido y/o a la persona de cualquier naturaleza que se dé de alta y/o use
+                    cualquiera de los servicios que se ofrecen a través de dicha página. El usuario sólo podrá imprimir y/o copiar cualquier
+                    información contenida o publicada en el sitio Web{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>{' '}
+                    exclusivamente para uso personal, queda terminantemente prohibido el uso comercial de dicha información.
                 </p>
 
                 <p>
                     En caso de ser persona moral se sujetará a lo dispuesto por el artículo 148, fracción IV de la Ley Federal del Derecho de Autor.
                     La reimpresión, publicación, distribución, asignación, sublicencia, venta, reproducción electrónica o por otro medio, parcial o
-                    total, de cualquier información, documento o gráfico que aparezca en el sitio Web www.quieroseragentemetlife.com.mx para cualquier
-                    uso distinto al personal no comercial le está expresamente prohibido al usuario, a menos de que cuente con la autorización previa
-                    y por escrito de METLIFE MEXICO.
+                    total, de cualquier información, documento o gráfico que aparezca en el sitio Web{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>{' '}
+                    para cualquier uso distinto al personal no comercial le está expresamente prohibido al usuario, a menos de que cuente con la
+                    autorización previa y por escrito de METLIFE MEXICO.
                 </p>
 
                 <h4 className="bold-text">Reglas para el uso del sitio web</h4>
 
                 <p>
-                    El usuario y METLIFE MEXICO están de acuerdo en que la utilización del sitio Web www.quieroseragentemetlife.com.mx se sujetará a
-                    las siguientes reglas:
+                    El usuario y METLIFE MEXICO están de acuerdo en que la utilización del sitio Web{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>{' '}
+                    se sujetará a las siguientes reglas:
                 </p>
 
                 <p>
@@ -131,16 +162,23 @@ export const PoliticasPage = () => {
                 <h4 className="bold-text">Derechos de autor y propiedad industrial</h4>
 
                 <p>
-                    METLIFE MEXICO, el sitio Web www.quieroseragentemetlife.com.mx sus logotipos y todo el material que aparece en dicho sitio, son
-                    marcas, nombres de dominio, nombres comerciales y obras artísticas propiedad de sus respectivos titulares y están protegidos por
-                    los tratados internacionales y las leyes aplicables en materia de propiedad intelectual y derechos de autor.
+                    METLIFE MEXICO, el sitio Web{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>{' '}
+                    sus logotipos y todo el material que aparece en dicho sitio, son marcas, nombres de dominio, nombres comerciales y obras
+                    artísticas propiedad de sus respectivos titulares y están protegidos por los tratados internacionales y las leyes aplicables en
+                    materia de propiedad intelectual y derechos de autor.
                 </p>
 
                 <p>
                     Los derechos de autor sobre el contenido, organización, recopilación, compilación, información, logotipos, fotografías, imágenes,
-                    programas, aplicaciones, y en general cualquier información contenida o publicada en el sitio Web
-                    www.quieroseragentemetlife.com.mx se encuentran debidamente protegidos a favor de METLIFE MEXICO, sus afiliados, proveedores y/o
-                    de sus respectivos propietarios, de conformidad con la legislación aplicable en materia de propiedad intelectual e industrial.
+                    programas, aplicaciones, y en general cualquier información contenida o publicada en el sitio Web{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>{' '}
+                    se encuentran debidamente protegidos a favor de METLIFE MEXICO, sus afiliados, proveedores y/o de sus respectivos propietarios, de
+                    conformidad con la legislación aplicable en materia de propiedad intelectual e industrial.
                 </p>
 
                 <p>
@@ -151,24 +189,34 @@ export const PoliticasPage = () => {
 
                 <p>
                     En caso de que el usuario transmita a METLIFE MEXICO cualquier información, programas, aplicaciones, software o en general
-                    cualquier material que requiera ser licenciado a través del sitio Web www.quieroseragentemetlife.com.mx el usuario otorga con este
-                    acto a METLIFE MEXICO una licencia perpetua, universal, gratuita, no exclusiva, mundial y libre de regalías, que incluye los
-                    derechos de sublicenciar, vender, reproducir, distribuir, transmitir, crear trabajos derivados, exhibirlos y ejecutarlos
-                    públicamente.
+                    cualquier material que requiera ser licenciado a través del sitio Web{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>{' '}
+                    el usuario otorga con este acto a METLIFE MEXICO una licencia perpetua, universal, gratuita, no exclusiva, mundial y libre de
+                    regalías, que incluye los derechos de sublicenciar, vender, reproducir, distribuir, transmitir, crear trabajos derivados,
+                    exhibirlos y ejecutarlos públicamente.
                 </p>
 
                 <p>
                     Lo establecido en el párrafo anterior se aplicará igualmente a cualquier otra información que el usuario envíe o transmita a
-                    METLIFE MEXICO, incluyendo, sin limitación alguna, ideas para renovar o mejorar el sitio Web www.quieroseragentemetlife.com.mx ya
-                    sea que éstas hayan sido incluidas en cualquier espacio de la página señalada o en virtud de otros medios o modos de transmisión
-                    conocidos o que sean desarrollados en el futuro.
+                    METLIFE MEXICO, incluyendo, sin limitación alguna, ideas para renovar o mejorar el sitio Web{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>{' '}
+                    ya sea que éstas hayan sido incluidas en cualquier espacio de la página señalada o en virtud de otros medios o modos de
+                    transmisión conocidos o que sean desarrollados en el futuro.
                 </p>
 
                 <p>
                     Por lo anterior, el usuario renuncia expresamente con este acto a llevar a cabo cualquier acción, demanda o reclamación en contra
                     de METLIFE MEXICO, sus afiliados o proveedores por cualquier actual o eventual violación de cualquier derecho de autor o propiedad
                     intelectual derivado de la información, programas, aplicaciones, software, ideas y demás material que el propio usuario envíe al
-                    sitio Web www.quieroseragentemetlife.com.mx.
+                    sitio Web{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>
+                    .
                 </p>
 
                 <p>
@@ -178,16 +226,19 @@ export const PoliticasPage = () => {
                 </p>
 
                 <p>
-                    En caso de que algún usuario o tercero consideren que cualquiera de los contenidos que se encuentren o sean introducidos en
-                    www.quieroseragentemetlife.com.mx y/o cualquiera de sus servicios, violen sus derechos de propiedad intelectual deberán enviar una
-                    notificación a la siguiente dirección talentohumano@vitamet.com.mx, en la que indiquen: i) datos personales verídicos (nombre,
-                    dirección, número de teléfono y dirección de correo electrónico del reclamante); ii) firma autógrafa con los datos personales del
-                    titular de los derechos de propiedad intelectual; iii) indicación precisa y completa del (los) contenido (s) protegido (s)
-                    mediante los derechos de propiedad intelectual supuestamente infringidos, así como la localización de dichas violaciones en el
-                    sitio web referido; iv) declaración expresa y clara de que la introducción del (los) contenido (s) indicado (s) se ha realizado
-                    sin el consentimiento del titular de los derechos de propiedad intelectual supuestamente infringidos; v) declaración expresa,
-                    clara y bajo la responsabilidad del reclamante de que la información proporcionada en la notificación es exacta y de que la
-                    introducción del (los) contenido (s) constituye una violación de dichos derechos.
+                    En caso de que algún usuario o tercero consideren que cualquiera de los contenidos que se encuentren o sean introducidos en{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>{' '}
+                    y/o cualquiera de sus servicios, violen sus derechos de propiedad intelectual deberán enviar una notificación a la siguiente
+                    dirección talentohumano@vitamet.com.mx, en la que indiquen: i) datos personales verídicos (nombre, dirección, número de teléfono y
+                    dirección de correo electrónico del reclamante); ii) firma autógrafa con los datos personales del titular de los derechos de
+                    propiedad intelectual; iii) indicación precisa y completa del (los) contenido (s) protegido (s) mediante los derechos de propiedad
+                    intelectual supuestamente infringidos, así como la localización de dichas violaciones en el sitio web referido; iv) declaración
+                    expresa y clara de que la introducción del (los) contenido (s) indicado (s) se ha realizado sin el consentimiento del titular de
+                    los derechos de propiedad intelectual supuestamente infringidos; v) declaración expresa, clara y bajo la responsabilidad del
+                    reclamante de que la información proporcionada en la notificación es exacta y de que la introducción del (los) contenido (s)
+                    constituye una violación de dichos derechos.
                 </p>
 
                 <h4 className="bold-text">Material publicitario</h4>
@@ -195,7 +246,11 @@ export const PoliticasPage = () => {
                 <p>
                     El usuario reconoce y acepta que METLIFE MEXICO es una organización independiente de terceros patrocinadores y anunciantes cuya
                     información, imágenes, anuncios y demás material publicitario o promocional (en lo subsecuente "material publicitario") puede ser
-                    publicado en el sitio Web www.quieroseragentemetlife.com.mx.
+                    publicado en el sitio Web{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>
+                    .
                 </p>
 
                 <p>
@@ -207,8 +262,12 @@ export const PoliticasPage = () => {
                 <h4 className="bold-text">Negación de garantías</h4>
 
                 <p>
-                    El usuario está de acuerdo que la utilización del sitio Web www.quieroseragentemetlife.com.mx se realiza bajo su propio riesgo y
-                    que los servicios y productos que ahí se prestan y ofrecen se prevén sobre una base "tal cual" y "según sean disponibles".
+                    El usuario está de acuerdo que la utilización del sitio Web{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>{' '}
+                    se realiza bajo su propio riesgo y que los servicios y productos que ahí se prestan y ofrecen se prevén sobre una base "tal cual"
+                    y "según sean disponibles".
                 </p>
 
                 <p>
@@ -218,13 +277,21 @@ export const PoliticasPage = () => {
 
                 <p>
                     METLIFE MEXICO no garantiza o avala en ninguna forma la veracidad, precisión, legalidad, moralidad o ninguna otra característica
-                    del contenido del material que se publique en el sitio Web www.quieroseragentemetlife.com.mx.
+                    del contenido del material que se publique en el sitio Web{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>
+                    .
                 </p>
 
                 <p>
                     METLIFE MEXICO se libera de cualquier responsabilidad y condiciones, tanto expresas como implícitas, en relación con los servicios
                     e información contenida o disponible en o a través de esta página web; incluyendo, sin limitación alguna la disponibilidad de uso
-                    del sitio Web www.quieroseragentemetlife.com.mx.
+                    del sitio Web{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>
+                    .
                 </p>
 
                 <h4 className="bold-text">La disponibilidad de uso del sitio Web</h4>
@@ -248,9 +315,12 @@ export const PoliticasPage = () => {
                 </p>
 
                 <p>
-                    1.- El uso o ejecución del sitio Web www.quieroseragentemetlife.com.mx, la proveeduría o falta de la misma de servicios de
-                    cualquier información o gráficos contenidos o publicados en o a través del sitio señalado. La actualización o falta de
-                    actualización de la información.
+                    1.- El uso o ejecución del sitio Web{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>
+                    , la proveeduría o falta de la misma de servicios de cualquier información o gráficos contenidos o publicados en o a través del
+                    sitio señalado. La actualización o falta de actualización de la información.
                 </p>
 
                 <p>
@@ -265,10 +335,14 @@ export const PoliticasPage = () => {
                 </p>
 
                 <p>
-                    4.- Modificaciones al sitio Web www.quieroseragentemetlife.com.mx METLIFE MEXICO podrá en cualquier momento y cuando lo considere
-                    conveniente, sin necesidad de avisar al usuario, realizar correcciones, adiciones, mejoras o modificaciones al contenido,
-                    presentación, información, servicios, áreas, bases de datos y demás elementos de dicho sitio, sin que ello de lugar ni derecho a
-                    ninguna reclamación o indemnización, ni que esto implique reconocimiento de responsabilidad alguna a favor del usuario.
+                    4.- Modificaciones al sitio Web{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>{' '}
+                    METLIFE MEXICO podrá en cualquier momento y cuando lo considere conveniente, sin necesidad de avisar al usuario, realizar
+                    correcciones, adiciones, mejoras o modificaciones al contenido, presentación, información, servicios, áreas, bases de datos y
+                    demás elementos de dicho sitio, sin que ello de lugar ni derecho a ninguna reclamación o indemnización, ni que esto implique
+                    reconocimiento de responsabilidad alguna a favor del usuario.
                 </p>
 
                 <h4 className="bold-text">Modificaciones al convenio</h4>
@@ -279,24 +353,37 @@ export const PoliticasPage = () => {
                 </p>
 
                 <p>
-                    La publicación en el sitio Web www.quieroseragentemetlife.com.mx del convenio modificado. La notificación al usuario sobre dichas
-                    modificaciones. De esta forma, el usuario está de acuerdo en revisar dicho convenio periódicamente con la finalidad de mantenerse
-                    al tanto de dichas modificaciones. No obstante lo anterior, cada vez que el usuario acceda al sitio señalado se considerará como
-                    una aceptación absoluta a las modificaciones del presente convenio.
+                    La publicación en el sitio Web{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>{' '}
+                    del convenio modificado. La notificación al usuario sobre dichas modificaciones. De esta forma, el usuario está de acuerdo en
+                    revisar dicho convenio periódicamente con la finalidad de mantenerse al tanto de dichas modificaciones. No obstante lo anterior,
+                    cada vez que el usuario acceda al sitio señalado se considerará como una aceptación absoluta a las modificaciones del presente
+                    convenio.
                 </p>
 
                 <h4 className="bold-text">Privacidad de la información</h4>
 
                 <p>
-                    A través de www.quieroseragentemetlife.com.mx METLIFE MEXICO puede obtener diversa información del usuario que puede compilarse y
-                    fijarse en una base de datos para lo cual METLIFE MEXICO publica su "Aviso de Privacidad" en el sitio de
-                    www.quieroseragentemetlife.com.mx el cual se recomienda consultar para información referente al tratamiento de los datos
-                    personales del usuario.
+                    A través de{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>{' '}
+                    METLIFE MEXICO puede obtener diversa información del usuario que puede compilarse y fijarse en una base de datos para lo cual
+                    METLIFE MEXICO publica su "Aviso de Privacidad" en el sitio de{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>{' '}
+                    el cual se recomienda consultar para información referente al tratamiento de los datos personales del usuario.
                 </p>
 
                 <p>
-                    Si METLIFE MEXICO decide cambiar su Aviso de Privacidad, anunciará dichos cambios en el sitio www.quieroseragentemetlife.com.mxde
-                    manera que el usuario siempre pueda saber quién es el responsable del tratamiento, qué información se recopila, para qué se
+                    Si METLIFE MEXICO decide cambiar su Aviso de Privacidad, anunciará dichos cambios en el sitio{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>{' '}
+                    de manera que el usuario siempre pueda saber quién es el responsable del tratamiento, qué información se recopila, para qué se
                     solicita, entre otras cosas.
                 </p>
 
@@ -304,16 +391,22 @@ export const PoliticasPage = () => {
 
                 <p>
                     Ocasionalmente, METLIFE MEXICO podrá agregar a los TÉRMINOS Y CONDICIONES DE USO del presente convenio provisiones adicionales
-                    relativas a áreas específicas o nuevos servicios que se proporcionen en o a través del sitio Web www.quieroseragentemetlife.com.mx
+                    relativas a áreas específicas o nuevos servicios que se proporcionen en o a través del sitio Web{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>{' '}
                     (en lo subsecuente "términos adicionales"), los cuales serán publicados en las áreas específicas o nuevos servicios de dicho sitio
                     para su lectura y aceptación.
                 </p>
 
                 <p>
                     El usuario reconoce y acepta que a estos términos adicionales – ocasionalmente – METLIFE MEXICO podrá agregar a los mismos,
-                    provisiones adicionales relativas a áreas específicas o nuevos servicios que se proporcionen en o a través del sitio Web
-                    www.quieroseragentemetlife.com.mx (en lo subsecuente "términos adicionales"), los cuales serán publicados en las áreas específicas
-                    o nuevos servicios de dicho sitio para su lectura y aceptación.
+                    provisiones adicionales relativas a áreas específicas o nuevos servicios que se proporcionen en o a través del sitio Web{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>{' '}
+                    (en lo subsecuente "términos adicionales"), los cuales serán publicados en las áreas específicas o nuevos servicios de dicho sitio
+                    para su lectura y aceptación.
                 </p>
 
                 <p>
@@ -337,7 +430,13 @@ export const PoliticasPage = () => {
                     del usuario al presente convenio; incluyendo, sin limitación de alguna de las derivadas de:
                 </p>
 
-                <p>1.- Cualquier aspecto relativo al uso del sitio Web www.quieroseragentemetlife.com.mx.</p>
+                <p>
+                    1.- Cualquier aspecto relativo al uso del sitio Web{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>
+                    .
+                </p>
 
                 <p>
                     2.- La información contenida o disponible en o a través de dicho sitio o de injurias, difamación o cualquier otra conducta
@@ -353,8 +452,11 @@ export const PoliticasPage = () => {
 
                 <p>
                     METLIFE MEXICO se reserva el derecho, a su exclusiva discreción, y sin necesidad de aviso o notificación al usuario, para:
-                    Terminar definitivamente el presente convenio. Descontinuar o dejar de publicar definitivamente el sitio Web
-                    www.quieroseragentemetlife.com.mx sin responsabilidad alguna para METLIFE MEXICO, sus afiliados o proveedores.
+                    Terminar definitivamente el presente convenio. Descontinuar o dejar de publicar definitivamente el sitio Web{' '}
+                    <NavLink to="/" title="ir a quieroseragentemetlife.com.mx">
+                        www.quieroseragentemetlife.com.mx
+                    </NavLink>{' '}
+                    sin responsabilidad alguna para METLIFE MEXICO, sus afiliados o proveedores.
                 </p>
 
                 <h4 className="bold-text">Subsistencia</h4>

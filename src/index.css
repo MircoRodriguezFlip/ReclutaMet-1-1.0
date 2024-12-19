@@ -749,23 +749,35 @@ body {
 
 /* -------------------------------------- WHATSAPP */
 
-.whatsapp-icon {
+.whatsapp-button {
     position: fixed;
-    bottom: 30px;
-    right: 0px;
-    background: none;
+    right: 0;
+    bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    background-color: #25d366;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 2px;
     border: none;
+    border-radius: 8px 0 0 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
     z-index: 1000;
-    transition: transform 0.3s ease;
 }
 
-.whatsapp-icon:hover {
-    transform: scale(1.1);
+.whatsapp-button:hover {
+    background-color: #13833e;
 }
 
-.whatsapp-image {
-    width: 60px;
-    height: auto;
+.whatsapp-text {
+    transform: rotate(180deg);
+    text-align: center;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -1078,6 +1090,14 @@ body {
 
     .logo-footer {
         height: 18px;
+    }
+
+    /* -------------------------------------- WHATSAPP */
+
+    .whatsapp-button {
+        bottom: 100px;
+        font-size: 17px;
+        padding: 20px 4px;
     }
 }
 
@@ -1397,8 +1417,9 @@ body {
 
     /* -------------------------------------- WHATSAPP */
 
-    .whatsapp-image {
-        width: 80px;
+    .whatsapp-button {
+        font-size: 18px;
+        padding: 25px 4px;
     }
 }
 
@@ -1653,6 +1674,13 @@ body {
     .logo-footer {
         height: 23px;
     }
+
+    /* -------------------------------------- WHATSAPP */
+
+    .whatsapp-button {
+        font-size: 19px;
+        padding: 30px 6px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -1678,6 +1706,10 @@ body {
     }
 
     /* ------------------------------------------------------------------------------------ LANDING PAGE */
+
+    .landing-page-container {
+        padding-top: 110px;
+    }
 
     .section-landing-1 {
         padding: 0 13vw;
@@ -1960,6 +1992,14 @@ body {
 
     .logo-footer {
         height: 26px;
+    }
+
+    /* -------------------------------------- WHATSAPP */
+
+    .whatsapp-button {
+        bottom: 120px;
+        font-size: 20px;
+        padding: 35px 6px;
     }
 }
 
@@ -2245,13 +2285,10 @@ body {
 
     /* -------------------------------------- WHATSAPP */
 
-    .whatsapp-icon {
-        bottom: 10px;
-        right: 10px;
-    }
-
-    .whatsapp-image {
-        width: 100px;
+    .whatsapp-button {
+        bottom: 120px;
+        font-size: 22px;
+        padding: 35px 10px;
     }
 }
 
@@ -2526,8 +2563,9 @@ body {
 
     /* -------------------------------------- WHATSAPP */
 
-    .whatsapp-icon {
-        bottom: 20px;
-        right: 20px;
+    .whatsapp-button {
+        bottom: 200px;
+        font-size: 25px;
+        padding: 35px 10px;
     }
 }
